@@ -1,4 +1,6 @@
 ﻿using StoreUI;
+using BL;
+using DL;
 
 bool repeat = true;
 IMenu menu = new MainMenu();
@@ -13,7 +15,7 @@ while(repeat){
             menu = new AddProductMenu();
             break;
         case "AddCustomer":
-            menu = new AddCustomerMenu();
+            menu = new AddCustomerMenu(new CustomerBL(new Repository()));
             break;
         case "MainMenu":
             menu = new MainMenu();

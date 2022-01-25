@@ -1,4 +1,5 @@
 using Models;
+using BL;
 
 namespace StoreUI
 {
@@ -6,6 +7,12 @@ namespace StoreUI
     {
         private static Customer _newCustomer = new Customer();
 
+        private ICustomerBL _customerBL;
+        public AddCustomerMenu(ICustomerBL p_customerBL)
+        {
+            _customerBL = p_customerBL;
+        }
+        
         public void Display()
         {
             Console.WriteLine("Enter the employee information");
@@ -26,6 +33,7 @@ namespace StoreUI
                 case "0":
                     return "MainMenu";
                 case "1":
+                    _customerBL.AddCustomer(_newCustomer);
                     return "MainMenu";
                 case "2":
                     Console.WriteLine("Please enter email address");
