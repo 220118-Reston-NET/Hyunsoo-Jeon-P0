@@ -1,0 +1,20 @@
+[
+  {
+    "ProductName": "Coolant",
+    "Price": 15,
+    "Location": "L1",
+    "Quantity": 10
+  },
+  {
+    "ProductName": "Coolant",
+    "Price": 15,
+    "Location": "L1",
+    "Quantity": 10
+  },
+  {
+    "ProductName": "Brakes set",
+    "Price": 300,
+    "Location": "L3",
+    "Quantity": 5
+  }
+]

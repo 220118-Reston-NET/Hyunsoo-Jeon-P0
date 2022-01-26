@@ -3,6 +3,7 @@ namespace StoreUI{
         public void Display(){
             Console.WriteLine("Welcome to Store!");
             Console.WriteLine("What would you like to do?");
+            Console.WriteLine("[3] Search Customer");
             Console.WriteLine("[2] Add Customer");
             Console.WriteLine("[1] Add product ");
             Console.WriteLine("[0] Exit");
@@ -18,6 +19,8 @@ namespace StoreUI{
                     return "AddProduct";
                 case "2":
                     return "AddCustomer";
+                case "3":
+                    return "SearchCustomer";
                 default:
                     Console.WriteLine("Please input a vaild response");
                     Console.WriteLine("Please press Enter to continue");

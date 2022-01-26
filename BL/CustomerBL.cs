@@ -14,6 +14,7 @@ namespace BL
         public Customer AddCustomer(Customer p_customer)
         {   
             List<Customer> listOfCustomer = _repo.GetAllCustomer();
+            
             if(listOfCustomer.Count < 5)
             {
                 return _repo.AddCustomer(p_customer);
@@ -23,6 +24,13 @@ namespace BL
                 throw new Exception("You cannot have more than 5 customers!");
             }
 
+        }
+
+        public List<Customer> SearchCustomer(string p_name)
+        {   
+            List<Customer> listOfCustomer = _repo.GetAllCustomer();
+
+            return listOfCustomer.Where(customer => customer.Name.Contains(p_name)).ToList();
         }
     }
 }

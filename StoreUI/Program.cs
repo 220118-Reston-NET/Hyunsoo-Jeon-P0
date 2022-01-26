@@ -11,6 +11,9 @@ while(repeat){
     string ans = menu.UserChoice();
 
     switch(ans){
+        case "SearchCustomer":
+            menu = new SearchCustomerMenu(new CustomerBL(new Repository()));
+            break;
         case "AddProduct":
             menu = new AddProductMenu(new ProductBL(new Repository()));
             break;

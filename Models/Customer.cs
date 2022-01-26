@@ -11,5 +11,11 @@ namespace Models{
             Email = "hyunsoo@email.com";
             ContactNo = "123-456-7891";
         }
+
+        public override string ToString()
+        {
+            return $"Name: {Name}\n Address: {Address}\n Email: {Email}\n Contact number: {ContactNo}";
+        }
     }
+
 }
