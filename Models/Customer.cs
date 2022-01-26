@@ -9,7 +9,7 @@ namespace Models{
             Name="Hyunsoo";
             Address="1234 Main St, San Jose, CA 11111";
             Email = "hyunsoo@email.com";
-            ContactNo = "123-456-7890";
+            ContactNo = "123-456-7891";
         }
     }
 }

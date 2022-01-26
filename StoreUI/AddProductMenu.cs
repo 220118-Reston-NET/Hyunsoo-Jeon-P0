@@ -1,10 +1,17 @@
 using Models;
+using BL;
 
 namespace StoreUI
 {
     public class AddProductMenu : IMenu 
     {
         private static Product _newProduct = new Product();
+
+        private IProductBL _productBL;
+        public AddProductMenu(IProductBL p_productBL)
+        {
+            _productBL = p_productBL;
+        }
         public void Display()
         {
             Console.WriteLine("Enter the product information");
@@ -12,7 +19,7 @@ namespace StoreUI
             Console.WriteLine("[4] Price -" + _newProduct.Price);
             Console.WriteLine("[3] Quantity -" + _newProduct.Quantity);
             Console.WriteLine("[2] Location -" + _newProduct.Location);
-            Console.WriteLine("[1] Add product ");
+            Console.WriteLine("[1] SAVE product ");
             Console.WriteLine("[0] Exit");
         }
 
@@ -25,6 +32,17 @@ namespace StoreUI
                 case "0":
                     return "MainMenu";
                 case "1":
+                    try
+                    {
+                        _productBL.AddProduct(_newProduct);
+                    }
+                    catch (System.Exception exc)
+                    {
+                        
+                        Console.WriteLine(exc.Message);
+                        Console.WriteLine("Press Enter to continue");
+                        Console.ReadLine();
+                    }
                     return "MainMenu";
                 case "2":
                     Console.WriteLine("Please enter the location");

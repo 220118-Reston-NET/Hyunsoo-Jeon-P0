@@ -20,7 +20,7 @@ namespace StoreUI
             Console.WriteLine("[4] Contact No -" + _newCustomer.ContactNo);
             Console.WriteLine("[3] Address -" + _newCustomer.Address);
             Console.WriteLine("[2] Email -" + _newCustomer.Email);
-            Console.WriteLine("[1] Add a new employee ");
+            Console.WriteLine("[1] SAVE a new employee ");
             Console.WriteLine("[0] Exit");
         }
 
@@ -33,7 +33,17 @@ namespace StoreUI
                 case "0":
                     return "MainMenu";
                 case "1":
-                    _customerBL.AddCustomer(_newCustomer);
+                    try
+                    {
+                        _customerBL.AddCustomer(_newCustomer);
+                    }
+                    catch (System.Exception exc)
+                    {
+                        
+                        Console.WriteLine(exc.Message);
+                        Console.WriteLine("Press Enter to continue");
+                        Console.ReadLine();
+                    }
                     return "MainMenu";
                 case "2":
                     Console.WriteLine("Please enter email address");

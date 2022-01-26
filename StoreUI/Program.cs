@@ -12,7 +12,7 @@ while(repeat){
 
     switch(ans){
         case "AddProduct":
-            menu = new AddProductMenu();
+            menu = new AddProductMenu(new ProductBL(new Repository()));
             break;
         case "AddCustomer":
             menu = new AddCustomerMenu(new CustomerBL(new Repository()));
