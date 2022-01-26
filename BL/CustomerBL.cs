@@ -16,14 +16,13 @@ namespace BL
             List<Customer> listOfCustomer = _repo.GetAllCustomer();
             if(listOfCustomer.Count < 5)
             {
-                _repo.AddCustomer(p_customer);
+                return _repo.AddCustomer(p_customer);
             }
             else
             {
                 throw new Exception("You cannot have more than 5 customers!");
             }
 
-            return _repo.AddCustomer(p_customer);
         }
     }
 }

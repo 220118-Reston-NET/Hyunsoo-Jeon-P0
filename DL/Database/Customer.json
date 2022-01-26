@@ -1,6 +1,14 @@
-{
-  "Name": "Hanson",
-  "Address": "1234 Main St, San Jose, CA 11111",
-  "Email": "hyunsoo@email.com",
-  "ContactNo": "223-223-1245"
-}
+[
+  {
+    "Name": "Hyunsoo",
+    "Address": "1234 Main St, San Jose, CA 11111",
+    "Email": "hyunsoo@email.com",
+    "ContactNo": "123-456-7891"
+  },
+  {
+    "Name": "Hyunsoo",
+    "Address": "1234 Main St, San Jose, CA 11111",
+    "Email": "hyunsoo@email.com",
+    "ContactNo": "123-456-7891"
+  }
+]
