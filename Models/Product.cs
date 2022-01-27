@@ -3,7 +3,24 @@
     public class Product
     {
         public string ProductName { get; set; }
-        public int Price { get; set; }
+
+        private int _price;
+        public int Price
+        {
+            get { return _price; }
+            set { 
+                    if(value >=0)
+                    {
+                        _price = value; 
+                    }
+                    else 
+                    {
+                        throw new Exception("Price should not be negative value");
+                    }
+                }    
+        }
+        
+
         public string Location { get; set; }
 
         private int _quantity;
