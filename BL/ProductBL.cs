@@ -25,5 +25,12 @@ namespace BL
             }
 
         }
+
+        public List<Product> SearchProduct(string p_productName)
+        {   
+            List<Product> listOfProduct = _repo.GetAllProduct();
+
+            return listOfProduct.Where(product => product.ProductName.Contains(p_productName)).ToList();
+        }
     }
 }
