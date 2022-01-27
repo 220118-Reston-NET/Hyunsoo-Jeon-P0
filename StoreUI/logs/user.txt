@@ -1,0 +1,26 @@
+2022-01-26 22:29:52.255 -08:00 [INF] Displaying Adding customer Menu to user
+2022-01-26 22:29:58.072 -08:00 [INF] Displaying Adding customer Menu to user
+2022-01-26 22:30:05.392 -08:00 [INF] Displaying Adding customer Menu to user
+2022-01-26 22:30:29.766 -08:00 [INF] Displaying Adding customer Menu to user
+2022-01-26 22:30:38.617 -08:00 [INF] Displaying Adding customer Menu to user
+2022-01-26 22:30:39.682 -08:00 [INF] Adding Customer 
+Name: Mike
+ Address: 3366 Third ave, Los gatos, CA 55555
+ Email: mike@email.com
+ Contact number: 555-666-7777
+2022-01-26 22:30:39.717 -08:00 [INF] Successful at adding customer!
+2022-01-26 22:30:42.621 -08:00 [INF] Displaying Search product Menu to user
+2022-01-26 22:30:50.091 -08:00 [INF] Displaying Adding product Menu to user
+2022-01-26 22:31:06.621 -08:00 [INF] Displaying Adding product Menu to user
+2022-01-26 22:31:09.756 -08:00 [INF] Displaying Adding product Menu to user
+2022-01-26 22:31:12.756 -08:00 [INF] Displaying Adding product Menu to user
+2022-01-26 22:31:17.211 -08:00 [INF] Displaying Adding product Menu to user
+2022-01-26 22:31:18.366 -08:00 [INF] Adding Product 
+Product Name: Tail light bulb
+ Quantity: 7
+ Location: L6
+ Price: 2
+2022-01-26 22:31:18.369 -08:00 [INF] Successful at adding Product!
+2022-01-26 22:31:23.136 -08:00 [INF] Displaying Search Customer Menu to user
+2022-01-26 22:31:32.870 -08:00 [INF] Displaying Search product Menu to user
+2022-01-26 22:31:47.705 -08:00 [INF] Exiting application

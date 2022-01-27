@@ -35,11 +35,13 @@ namespace StoreUI
                 case "1":
                     try
                     {
+                        Log.Information("Adding Customer \n" + _newCustomer);
                         _customerBL.AddCustomer(_newCustomer);
+                        Log.Information("Successful at adding customer!");
                     }
                     catch (System.Exception exc)
                     {
-                        
+                        Log.Warning("Failed to add Customer due to reaching total capacity (5)");
                         Console.WriteLine(exc.Message);
                         Console.WriteLine("Press Enter to continue");
                         Console.ReadLine();
