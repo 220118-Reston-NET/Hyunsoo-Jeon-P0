@@ -67,4 +67,23 @@ namespace Test
             );
         }
     }
+    public class CustomerModelTest
+    {
+        [Fact]
+        public void CustomerNameShouldValidData()
+        {
+            //arrange
+            Customer name = new Customer();
+            string validName = "Jordan";
+
+            //act
+            name.Name = validName;
+
+            // assert
+            Assert.NotNull(name.Name);
+            Assert.Equal(validName, name.Name);
+
+        }
+    }
+    
 }
