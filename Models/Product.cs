@@ -2,6 +2,7 @@
 {
     public class Product
     {
+        public int ProductID { get; set; }
         public string ProductName { get; set; }
 
         private int _price;
@@ -20,31 +21,27 @@
                 }    
         }
         
-
-        public string Location { get; set; }
-
-        private int _quantity;
-        public int Quantity
-        {
-            get { return _quantity; }
-            set { 
-                if(value >= 0) {
-                    _quantity = value;
-                } else {
-                    throw new Exception("Stock ran out!");
-                }
-            }
-        }
+        //private int _quantity;
+        //public int Quantity
+        //{
+        //    get { return _quantity; }
+        //    set { 
+        //        if(value >= 0) {
+        //            _quantity = value;
+        //        } else {
+        //            throw new Exception("Stock ran out!");
+        //        }
+        //    }
+        //}
 
         public Product(){
             ProductName = "Coolant";
-            Quantity = 10;
-            Location = "L1";
+            //Quantity = 10;
             Price = 15;
         }
         public override string ToString()
         {
-            return $"Product Name: {ProductName}\n Quantity: {Quantity}\n Location: {Location}\n Price: {Price}";
+            return $"Product Name: {ProductName}\n Price: {Price}";
         }
     }
 }    
