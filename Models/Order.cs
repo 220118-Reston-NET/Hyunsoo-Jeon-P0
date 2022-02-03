@@ -3,14 +3,9 @@ namespace Models
     public class Order
     {
         public int OrderID { get; set; }
+        public int CustomerID { get; set; }
+        public int StoreID { get; set; }
         public int TotalPrice { get; set; }
-        private List<StoreFront> _listOfStore;
-        public List<StoreFront> ListOfStore
-        {
-            get { return _listOfStore; }
-            set { _listOfStore = value; }
-        }
-
         private List<LineItems> _lineItems;
         public List<LineItems> LineItems
         {
@@ -20,12 +15,20 @@ namespace Models
         
         
         public Order()
-        {
+        {   
+            OrderID = 1;
+            CustomerID = 1;
+            StoreID = 1;
             TotalPrice = 15;
-            // _listOfStore = new List<StoreFront>
-            // {
-            //     new StoreFront()
-            // };
+            LineItems = new List<LineItems>()
+            {
+                new LineItems()
+            };
+        }
+
+        public override string ToString()
+        {
+            return $"Order ID : {OrderID} \n Customer ID : {CustomerID} \n Store ID : {StoreID} Total Price: {TotalPrice}";
         }
     }
 }

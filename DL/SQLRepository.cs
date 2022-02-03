@@ -139,7 +139,7 @@ namespace DL
                 while(reader.Read())
                 {
                     listOfStoreFront.Add(new StoreFront(){
-                        StoreId = reader.GetInt32(0),
+                        StoreID = reader.GetInt32(0),
                         StoreName = reader.GetString(1),
                         StoreAddress = reader.GetString(2),
                     });
