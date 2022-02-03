@@ -3,10 +3,8 @@ namespace StoreUI{
         public void Display(){
             Console.WriteLine("Welcome to Store!");
             Console.WriteLine("What would you like to do?");
-            Console.WriteLine("[4] Search Product");
-            Console.WriteLine("[3] Search Customer");
-            Console.WriteLine("[2] Add Customer");
-            Console.WriteLine("[1] Add product ");
+            Console.WriteLine("[2] Customer Menu");
+            Console.WriteLine("[1] Admin Menu ");
             Console.WriteLine("[0] Exit");
         }
 
@@ -17,13 +15,9 @@ namespace StoreUI{
                 case "0":
                     return "Exit";
                 case "1":
-                    return "AddProduct";
+                    return "AdminMenu";
                 case "2":
-                    return "AddCustomer";
-                case "3":
-                    return "SearchCustomer";
-                case "4":
-                    return "SearchProduct";
+                    return "CustomerMenu";
                 default:
                     Console.WriteLine("Please input a vaild response");
                     Console.WriteLine("Please press Enter to continue");

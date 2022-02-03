@@ -24,3 +24,73 @@ Product Name: Tail light bulb
 2022-01-26 22:31:23.136 -08:00 [INF] Displaying Search Customer Menu to user
 2022-01-26 22:31:32.870 -08:00 [INF] Displaying Search product Menu to user
 2022-01-26 22:31:47.705 -08:00 [INF] Exiting application
+2022-02-03 07:45:56.138 -08:00 [INF] Displaying Search Customer Menu to user
+2022-02-03 07:46:15.410 -08:00 [INF] Exiting application
+2022-02-03 07:53:12.109 -08:00 [INF] Displaying Search Customer Menu to user
+2022-02-03 07:53:23.132 -08:00 [INF] Exiting application
+2022-02-03 07:53:44.074 -08:00 [INF] Displaying Adding customer Menu to user
+2022-02-03 07:54:12.841 -08:00 [INF] Displaying Adding customer Menu to user
+2022-02-03 07:54:31.456 -08:00 [INF] Displaying Adding customer Menu to user
+2022-02-03 07:54:55.831 -08:00 [INF] Displaying Adding customer Menu to user
+2022-02-03 07:54:58.501 -08:00 [INF] Adding Customer 
+Name: Steven Rogers
+ Address: 3093 Main st, San Jose, CA 93333
+ Email: hyunsoo@email.com
+ Contact number: 555-111-2222
+2022-02-03 07:54:59.146 -08:00 [INF] Successful at adding customer!
+2022-02-03 07:55:03.601 -08:00 [INF] Displaying Search Customer Menu to user
+2022-02-03 07:55:14.895 -08:00 [INF] Displaying Search Customer Menu to user
+2022-02-03 07:55:23.880 -08:00 [INF] Exiting application
+2022-02-03 07:57:06.902 -08:00 [INF] Displaying Search Customer Menu to user
+2022-02-03 07:57:14.925 -08:00 [INF] Exiting application
+2022-02-03 08:01:31.559 -08:00 [INF] Displaying Search product Menu to user
+2022-02-03 08:06:53.784 -08:00 [INF] Exiting application
+2022-02-03 08:18:52.474 -08:00 [INF] Exiting application
+2022-02-03 08:19:12.123 -08:00 [INF] Displaying Search product Menu to user
+2022-02-03 08:19:29.476 -08:00 [INF] Displaying Search product Menu to user
+2022-02-03 08:19:40.111 -08:00 [INF] Exiting application
+2022-02-03 08:27:56.850 -08:00 [INF] Displaying Search Customer Menu to user
+2022-02-03 08:28:04.452 -08:00 [INF] Exiting application
+2022-02-03 09:07:17.629 -08:00 [INF] Exiting application
+2022-02-03 09:07:53.900 -08:00 [INF] Exiting application
+2022-02-03 09:08:58.308 -08:00 [INF] Displaying Adding Store Menu to user
+2022-02-03 09:09:29.596 -08:00 [INF] Displaying Adding Store Menu to user
+2022-02-03 09:10:10.155 -08:00 [INF] Displaying Adding Store Menu to user
+2022-02-03 09:10:13.891 -08:00 [INF] Adding Store 
+Name: Car Parts3
+ Address: 8888 Stevens creek blvd, San Jose, CA 94646
+2022-02-03 09:10:14.524 -08:00 [WRN] Failed to add Product due to reaching total capacity (5)
+2022-02-03 09:10:22.485 -08:00 [INF] Exiting application
+2022-02-03 09:13:13.890 -08:00 [INF] Displaying Adding Store Menu to user
+2022-02-03 09:13:24.163 -08:00 [INF] Displaying Adding Store Menu to user
+2022-02-03 09:13:29.923 -08:00 [INF] Displaying Adding Store Menu to user
+2022-02-03 09:13:53.098 -08:00 [INF] Displaying Adding Store Menu to user
+2022-02-03 09:13:54.643 -08:00 [INF] Adding Store 
+ID: 0 
+Name: Car Parts3
+ Address: 8888 Stevens creek blvd, San Jose, CA 94645
+2022-02-03 09:13:55.152 -08:00 [WRN] Failed to add Product due to reaching total capacity (5)
+2022-02-03 09:16:43.887 -08:00 [INF] Displaying Adding Store Menu to user
+2022-02-03 09:16:49.151 -08:00 [INF] Adding Store 
+ID: 0 
+Name: Car Parts3
+ Address: 8888 Stevens creek blvd, San Jose, CA 94645
+2022-02-03 09:16:49.177 -08:00 [WRN] Failed to add Product due to reaching total capacity (5)
+2022-02-03 09:18:24.941 -08:00 [INF] Exiting application
+2022-02-03 09:19:05.697 -08:00 [INF] Displaying Adding Store Menu to user
+2022-02-03 09:19:07.075 -08:00 [INF] Adding Store 
+ID: 0 
+Name: All parts 1
+ Address: 7777 Main St, San Jose, CA 77777
+2022-02-03 09:19:07.536 -08:00 [WRN] Failed to add Product due to reaching total capacity (5)
+2022-02-03 09:20:34.239 -08:00 [INF] Exiting application
+2022-02-03 09:20:39.386 -08:00 [INF] Displaying Adding Store Menu to user
+2022-02-03 09:20:47.664 -08:00 [INF] Displaying Adding Store Menu to user
+2022-02-03 09:20:51.550 -08:00 [INF] Adding Store 
+ID: 0 
+Name: Car parts3
+ Address: 7777 Main St, San Jose, CA 77777
+2022-02-03 09:20:52.124 -08:00 [INF] Successful at adding Product!
+2022-02-03 09:20:56.079 -08:00 [INF] Exiting application
+2022-02-03 09:26:25.358 -08:00 [INF] Displaying Search store Menu to user
+2022-02-03 09:26:38.900 -08:00 [INF] Exiting application

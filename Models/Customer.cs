@@ -27,7 +27,7 @@ namespace Models{
 
         public override string ToString()
         {
-            return $"Name: {Name}\n Address: {Address}\n Email: {Email}\n Contact number: {ContactNo}";
+            return $"ID: {CustomerID} \nName: {Name}\n Address: {Address}\n Email: {Email}\n Contact number: {ContactNo}";
         }
     }
 

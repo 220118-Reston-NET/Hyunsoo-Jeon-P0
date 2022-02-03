@@ -50,6 +50,24 @@ namespace DL
             return p_product;
         }
 
+        public StoreFront AddStoreFront(StoreFront p_storeFront)
+        {
+            string sqlQuery = @"insert into StoreFront
+                            values(@storeName, @storeAddress)";
+
+            using(SqlConnection con = new SqlConnection(_connectionStrings))
+            {
+                con.Open();
+
+                SqlCommand command = new SqlCommand(sqlQuery, con);
+                command.Parameters.AddWithValue("@storeName", p_storeFront.StoreName);
+                command.Parameters.AddWithValue("@storeAddress", p_storeFront.StoreAddress);
+
+                command.ExecuteNonQuery();
+            }
+            return p_storeFront;
+        }
+
         public List<Customer> GetAllCustomer()
         {
             List<Customer> listOfCustomer = new List<Customer>();
@@ -102,6 +120,32 @@ namespace DL
                 }
             }
             return listOfProduct;
+        }
+
+        public List<StoreFront> GetAllStoreFront()
+        {
+             List<StoreFront> listOfStoreFront = new List<StoreFront>();
+
+            string sqlQuery = @"select * from StoreFront";
+
+            using(SqlConnection con = new SqlConnection(_connectionStrings))
+            {
+                con.Open();
+
+                SqlCommand command = new SqlCommand(sqlQuery, con);
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                while(reader.Read())
+                {
+                    listOfStoreFront.Add(new StoreFront(){
+                        StoreId = reader.GetInt32(0),
+                        StoreName = reader.GetString(1),
+                        StoreAddress = reader.GetString(2),
+                    });
+                }
+            }
+            return listOfStoreFront;
         }
     }
 }

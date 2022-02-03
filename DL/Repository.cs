@@ -51,5 +51,26 @@ namespace DL
             return JsonSerializer.Deserialize<List<Product>>(_jsonString);
             
         }
+
+        public StoreFront AddStoreFront(StoreFront p_storeFront)
+        {
+            string path = _filepath + "StoreFront.json";
+            
+            List<StoreFront> listOfStoreFront = GetAllStoreFront();
+            listOfStoreFront.Add(p_storeFront);
+
+            _jsonString1 = JsonSerializer.Serialize(listOfStoreFront, new JsonSerializerOptions {WriteIndented = true});
+
+            File.WriteAllText(path, _jsonString1);
+
+            return p_storeFront;
+        }
+
+        public List<StoreFront> GetAllStoreFront()
+        {
+             _jsonString = File.ReadAllText(_filepath + "StoreFront.json");
+
+            return JsonSerializer.Deserialize<List<StoreFront>>(_jsonString);
+        }
     }
 }

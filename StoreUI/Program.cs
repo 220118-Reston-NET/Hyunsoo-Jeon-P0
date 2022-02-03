@@ -32,6 +32,10 @@ while(repeat){
             Log.Information("Displaying Search Customer Menu to user");
             menu = new SearchCustomerMenu(new CustomerBL(new SQLRepository(_connectionString)));
             break;
+        case "SearchStoreFront":
+            Log.Information("Displaying Search store Menu to user");
+            menu = new SearchStoreFrontMenu(new StoreFrontBL(new SQLRepository(_connectionString)));
+            break;            
         case "AddProduct":
             Log.Information("Displaying Adding product Menu to user");
             menu = new AddProductMenu(new ProductBL(new SQLRepository(_connectionString)));
@@ -40,8 +44,18 @@ while(repeat){
             Log.Information("Displaying Adding customer Menu to user");
             menu = new AddCustomerMenu(new CustomerBL(new SQLRepository(_connectionString)));
             break;
+        case "AddStoreFront":
+            Log.Information("Displaying Adding Store Menu to user");
+            menu = new AddStoreFrontMenu(new StoreFrontBL(new SQLRepository(_connectionString)));
+            break;
         case "MainMenu":
             menu = new MainMenu();
+            break;
+        case "CustomerMenu":
+            menu = new CustomerMenu();
+            break;
+        case "AdminMenu":
+            menu = new AdminMenu();
             break;
         case "Exit":
             Log.Information("Exiting application");

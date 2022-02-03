@@ -15,13 +15,13 @@ namespace BL
         {   
             List<Product> listOfProduct = _repo.GetAllProduct();
             
-            if(listOfProduct.Count < 5)
+            if(listOfProduct.Count < 10)
             {
                 return _repo.AddProduct(p_product);
             }
             else
             {
-                throw new Exception("You cannot have more than 5 products!");
+                throw new Exception("You cannot have more than 10 products!");
             }
 
         }

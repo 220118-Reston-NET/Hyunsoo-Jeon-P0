@@ -41,7 +41,7 @@
         }
         public override string ToString()
         {
-            return $"Product Name: {ProductName}\n Price: {Price}";
+            return $"ID: {ProductID} \nProduct Name: {ProductName}\n Price: {Price}";
         }
     }
 }    

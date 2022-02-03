@@ -2,6 +2,7 @@ namespace Models
 {
     public class StoreFront
     {
+        public int StoreId { get; set; }
         public string StoreName { get; set; }
         public string StoreAddress { get; set; }
         private List<Product> _listOfProdct;
@@ -33,7 +34,7 @@ namespace Models
 
         public override string ToString()
         {
-            return $"Name: {StoreName}\n Address: {StoreAddress}";
+            return $"ID: {StoreId} \nName: {StoreName}\n Address: {StoreAddress}";
         }
 
     }
