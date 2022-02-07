@@ -34,7 +34,7 @@ namespace Models
 
         public override string ToString()
         {
-            return $"ID: {StoreID} \nName: {StoreName}\n Address: {StoreAddress}";
+            return $"Store ID: {StoreID} \n Store Name: {StoreName}\n Store Address: {StoreAddress}";
         }
 
     }

@@ -130,3 +130,5 @@ Inventory ID : 1
 2022-02-07 13:40:59.389 -08:00 [INF] Displaying Search invetory store Menu to user
 2022-02-07 13:41:46.054 -08:00 [INF] Displaying Search invetory store Menu to user
 2022-02-07 13:42:25.531 -08:00 [INF] Exiting application
+2022-02-07 13:45:57.781 -08:00 [INF] Displaying Search invetory store Menu to user
+2022-02-07 13:46:08.278 -08:00 [INF] Exiting application
