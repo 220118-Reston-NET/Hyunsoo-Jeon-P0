@@ -77,5 +77,21 @@ namespace DL
 
             return JsonSerializer.Deserialize<List<StoreFront>>(_jsonString);
         }
+
+        public List<Inventory> GetAllInventory()
+        {
+            throw new NotImplementedException();
+        }
+
+
+        Inventory IRepository.AddInventory(Inventory p_inventory)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Product> GetAllInventoryDetailInStoreByID(int p_storeId)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

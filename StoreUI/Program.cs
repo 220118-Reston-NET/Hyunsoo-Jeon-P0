@@ -24,6 +24,10 @@ while(repeat){
     string ans = menu.UserChoice();
 
     switch(ans){
+        case "SearchInventoryStore":
+            Log.Information("Displaying Search invetory store Menu to user");
+            menu = new SearchStoreInventoryMenu(new InventoryBL(new SQLRepository(_connectionString)));
+            break;
         case "SearchProduct":
             Log.Information("Displaying Search product Menu to user");
             menu = new SearchProductMenu(new ProductBL(new SQLRepository(_connectionString)));
@@ -47,6 +51,10 @@ while(repeat){
         case "AddStoreFront":
             Log.Information("Displaying Adding Store Menu to user");
             menu = new AddStoreFrontMenu(new StoreFrontBL(new SQLRepository(_connectionString)));
+            break;
+        case "AddInventory":
+            Log.Information("Displaying Adding Inventory Menu to user");
+            menu = new AddInventoryMenu(new InventoryBL(new SQLRepository(_connectionString)));
             break;
         case "MainMenu":
             menu = new MainMenu();

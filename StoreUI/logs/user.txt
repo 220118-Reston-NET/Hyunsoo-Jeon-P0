@@ -97,3 +97,36 @@ Name: Car parts3
 2022-02-07 09:26:45.743 -08:00 [INF] Displaying Search Customer Menu to user
 2022-02-07 09:27:08.435 -08:00 [INF] Displaying Search Customer Menu to user
 2022-02-07 09:30:13.908 -08:00 [INF] Exiting application
+2022-02-07 09:30:23.616 -08:00 [INF] Displaying Search Customer Menu to user
+2022-02-07 09:58:33.238 -08:00 [INF] Exiting application
+2022-02-07 12:15:09.404 -08:00 [INF] Displaying Adding product Menu to user
+2022-02-07 12:15:42.161 -08:00 [INF] Exiting application
+2022-02-07 12:15:48.403 -08:00 [INF] Displaying Search product Menu to user
+2022-02-07 12:16:15.505 -08:00 [INF] Exiting application
+2022-02-07 12:31:30.603 -08:00 [INF] Displaying Adding Inventory Menu to user
+2022-02-07 12:31:38.056 -08:00 [INF] Displaying Adding Inventory Menu to user
+2022-02-07 12:31:43.965 -08:00 [INF] Displaying Adding Inventory Menu to user
+2022-02-07 12:32:04.275 -08:00 [INF] Displaying Adding Inventory Menu to user
+2022-02-07 12:32:05.416 -08:00 [INF] Adding Inventory 
+Inventory ID : 1
+ Quantity : 9
+2022-02-07 12:32:06.114 -08:00 [WRN] Failed to add Inventory
+2022-02-07 12:34:08.594 -08:00 [INF] Exiting application
+2022-02-07 12:34:15.542 -08:00 [INF] Displaying Adding Inventory Menu to user
+2022-02-07 12:34:19.620 -08:00 [INF] Displaying Adding Inventory Menu to user
+2022-02-07 12:34:21.959 -08:00 [INF] Displaying Adding Inventory Menu to user
+2022-02-07 12:34:26.414 -08:00 [INF] Displaying Adding Inventory Menu to user
+2022-02-07 12:34:27.929 -08:00 [INF] Adding Inventory 
+Inventory ID : 1
+ Quantity : 9
+2022-02-07 12:34:28.633 -08:00 [INF] Successful at adding Inventory!
+2022-02-07 12:34:49.543 -08:00 [INF] Exiting application
+2022-02-07 12:35:30.946 -08:00 [INF] Displaying Search product Menu to user
+2022-02-07 12:35:40.588 -08:00 [INF] Displaying Search product Menu to user
+2022-02-07 12:35:52.019 -08:00 [INF] Displaying Search product Menu to user
+2022-02-07 12:35:59.728 -08:00 [INF] Exiting application
+2022-02-07 13:37:31.025 -08:00 [INF] Exiting application
+2022-02-07 13:40:51.800 -08:00 [INF] Exiting application
+2022-02-07 13:40:59.389 -08:00 [INF] Displaying Search invetory store Menu to user
+2022-02-07 13:41:46.054 -08:00 [INF] Displaying Search invetory store Menu to user
+2022-02-07 13:42:25.531 -08:00 [INF] Exiting application

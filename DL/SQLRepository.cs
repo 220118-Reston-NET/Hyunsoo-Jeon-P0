@@ -96,6 +96,25 @@ namespace DL
             return listOfCustomer;
         }    
 
+        public Inventory AddInventory(Inventory p_inventory)
+        {
+            string sqlQuery = @"insert into Inventory
+                            values(@qty, @storeId, @productId)";
+
+            using(SqlConnection con = new SqlConnection(_connectionStrings))
+            {
+                con.Open();
+
+                SqlCommand command = new SqlCommand(sqlQuery, con);
+                command.Parameters.AddWithValue("@qty", p_inventory.Qty);
+                command.Parameters.AddWithValue("@storeId", p_inventory.StoreID);
+                command.Parameters.AddWithValue("@productId", p_inventory.ProductID);
+
+
+                command.ExecuteNonQuery();
+            }
+            return p_inventory;
+        }
         public List<Product> GetAllProduct()
         {
             List<Product> listOfProduct = new List<Product>();
@@ -122,9 +141,39 @@ namespace DL
             return listOfProduct;
         }
 
+        public List<Inventory> GetAllInventory()
+        {
+            List<Inventory> _listOfinventory = new List<Inventory>();
+            
+            string sqlQuery = $"select * from Inventory";
+
+            using(SqlConnection con = new SqlConnection(_connectionStrings))
+            {
+                con.Open();
+
+                SqlCommand command = new SqlCommand(sqlQuery, con);
+
+                SqlDataReader reader = command.ExecuteReader();
+                
+                while(reader.Read())
+                {
+                    _listOfinventory.Add(new Inventory()
+                    {
+                        InventoryID = reader.GetInt32(0),
+                        Qty = reader.GetInt32(1),
+                        StoreID = reader.GetInt32(2),
+                        ProductID = reader.GetInt32(3)
+                    });
+                }
+
+                }
+            
+            return _listOfinventory;
+        }
+
         public List<StoreFront> GetAllStoreFront()
         {
-             List<StoreFront> listOfStoreFront = new List<StoreFront>();
+            List<StoreFront> listOfStoreFront = new List<StoreFront>();
 
             string sqlQuery = @"select * from StoreFront";
 
@@ -176,5 +225,34 @@ namespace DL
             }
             return listOfCustomer; 
         }
+
+        public List<Product> GetAllInventoryDetailInStoreByID(int p_storeId)
+        {
+                     
+            List<Product> _listOfInventory = new List<Product>();
+            string sqlQuery = @"select p.productId, p.productName, p.productPrice from Product p, Inventory i
+                                where p.productId = i.productId and i.storeId = @storeId";
+
+            using(SqlConnection con = new SqlConnection(_connectionStrings))
+            {
+                con.Open();
+
+                SqlCommand command = new SqlCommand(sqlQuery, con);
+                command.Parameters.AddWithValue("@storeId", p_storeId);
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                while(reader.Read())
+                {
+                     _listOfInventory.Add(new Product(){
+                        ProductID = reader.GetInt32(0),
+                        ProductName = reader.GetString(1),
+                        Price = reader.GetInt32(2)
+                    });
+                }
+            }
+            return _listOfInventory; 
+        }
+
     }
 }
