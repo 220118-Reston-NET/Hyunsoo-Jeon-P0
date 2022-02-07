@@ -7,6 +7,8 @@ namespace DL
         Customer AddCustomer(Customer p_customer);
         List<Customer> GetAllCustomer();
 
+        List<Customer> GetCustomerByCustomerID(int p_customerID);
+
         Product AddProduct(Product p_product);
         List<Product> GetAllProduct();
 

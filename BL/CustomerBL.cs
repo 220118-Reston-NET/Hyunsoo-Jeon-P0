@@ -26,7 +26,17 @@ namespace BL
 
         }
 
-        public List<Customer> SearchCustomer(string p_name)
+        public List<Customer> GetAllCustomer()
+        {
+            return _repo.GetAllCustomer();
+        }
+        public List<Customer> GetCustomerByCustomerID(int p_customerID)
+        {
+            return _repo.GetCustomerByCustomerID(p_customerID);
+        }
+
+
+        public List<Customer> SearchCustomerByName(string p_name)
         {   
             List<Customer> listOfCustomer = _repo.GetAllCustomer();
 

@@ -30,6 +30,11 @@ namespace DL
             
         }
 
+        public List<Customer> GetCustomerByCustomerID(int p_customerID)
+        {
+            throw new NotImplementedException();
+        }
+
         public Product AddProduct(Product p_product)
         {
             string path = _filepath + "Product.json";

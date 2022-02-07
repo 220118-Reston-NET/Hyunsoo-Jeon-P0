@@ -147,5 +147,34 @@ namespace DL
             }
             return listOfStoreFront;
         }
+
+        public List<Customer> GetCustomerByCustomerID(int p_customerID)
+        {
+            List<Customer> listOfCustomer = new List<Customer>();
+            string sqlQuery = @"select * from Customer c
+                                where c.customerID = @customerID";
+
+            using(SqlConnection con = new SqlConnection(_connectionStrings))
+            {
+                con.Open();
+
+                SqlCommand command = new SqlCommand(sqlQuery, con);
+                command.Parameters.AddWithValue("@customerID", p_customerID);
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                while(reader.Read())
+                {
+                     listOfCustomer.Add(new Customer(){
+                        CustomerID = reader.GetInt32(0),
+                        Name = reader.GetString(1),
+                        Address = reader.GetString(2),
+                        Email = reader.GetString(3),
+                        ContactNo = reader.GetString(4)
+                    });
+                }
+            }
+            return listOfCustomer; 
+        }
     }
 }

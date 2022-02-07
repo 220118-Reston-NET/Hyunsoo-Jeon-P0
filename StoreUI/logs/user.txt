@@ -94,3 +94,6 @@ Name: Car parts3
 2022-02-03 09:20:56.079 -08:00 [INF] Exiting application
 2022-02-03 09:26:25.358 -08:00 [INF] Displaying Search store Menu to user
 2022-02-03 09:26:38.900 -08:00 [INF] Exiting application
+2022-02-07 09:26:45.743 -08:00 [INF] Displaying Search Customer Menu to user
+2022-02-07 09:27:08.435 -08:00 [INF] Displaying Search Customer Menu to user
+2022-02-07 09:30:13.908 -08:00 [INF] Exiting application
