@@ -6,6 +6,7 @@ namespace StoreUI
         {
             Console.WriteLine("Good Day! ");
             Console.WriteLine("What would you like to do?");
+            Console.WriteLine("[9] Search / view orders");
             Console.WriteLine("[8] Search Store Inventory by store Id");
             Console.WriteLine("[7] Add Inventory");
             Console.WriteLine("[6] Search Store");
@@ -40,6 +41,8 @@ namespace StoreUI
                     return "AddInventory";
                 case "8":
                     return "SearchInventoryStore";
+                case "9":
+                    return "SearchOrder";
                 default:
                     Console.WriteLine("Please input a vaild response");
                     Console.WriteLine("Please press Enter to continue");

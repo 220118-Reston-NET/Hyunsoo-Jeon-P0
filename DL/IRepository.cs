@@ -19,5 +19,7 @@ namespace DL
         List<Product> GetAllInventoryDetailInStoreByID(int p_storeId);
 
         Inventory AddInventory(Inventory p_inventory);
+
+        List<Order> GetAllOrder();
     }
 }

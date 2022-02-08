@@ -93,5 +93,10 @@ namespace DL
         {
             throw new NotImplementedException();
         }
+
+        public List<Order> GetAllOrder()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

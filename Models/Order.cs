@@ -28,7 +28,7 @@ namespace Models
 
         public override string ToString()
         {
-            return $"Order ID : {OrderID} \n Customer ID : {CustomerID} \n Store ID : {StoreID} Total Price: {TotalPrice}";
+            return $"Order ID : {OrderID} \n Customer ID : {CustomerID} \n Store ID : {StoreID} \nTotal Price: {TotalPrice}";
         }
     }
 }

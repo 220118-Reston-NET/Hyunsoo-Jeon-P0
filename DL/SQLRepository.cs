@@ -254,5 +254,32 @@ namespace DL
             return _listOfInventory; 
         }
 
+         public List<Order> GetAllOrder()
+        {
+            List<Order> _listOfOrder = new List<Order>();
+
+            string sqlQuery = @"select * from Orders";
+
+            using(SqlConnection con = new SqlConnection(_connectionStrings))
+            {
+                con.Open();
+
+                SqlCommand command = new SqlCommand(sqlQuery, con);
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                while(reader.Read())
+                {
+                    _listOfOrder.Add(new Order(){
+                        OrderID = reader.GetInt32(0),
+                        TotalPrice = reader.GetInt32(1),
+                        StoreID = reader.GetInt32(2),
+                        CustomerID = reader.GetInt32(3),
+                    });
+                }
+            }
+            return _listOfOrder;
+        }
+        
     }
 }

@@ -24,6 +24,10 @@ while(repeat){
     string ans = menu.UserChoice();
 
     switch(ans){
+        case "SearchOrder":
+            Log.Information("Displaying Search Order Menu to user");
+            menu = new SearchOrderMenu(new OrderBL(new SQLRepository(_connectionString)));
+            break;
         case "SearchInventoryStore":
             Log.Information("Displaying Search invetory store Menu to user");
             menu = new SearchStoreInventoryMenu(new InventoryBL(new SQLRepository(_connectionString)));

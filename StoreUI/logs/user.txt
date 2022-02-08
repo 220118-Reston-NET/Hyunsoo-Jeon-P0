@@ -132,3 +132,56 @@ Inventory ID : 1
 2022-02-07 13:42:25.531 -08:00 [INF] Exiting application
 2022-02-07 13:45:57.781 -08:00 [INF] Displaying Search invetory store Menu to user
 2022-02-07 13:46:08.278 -08:00 [INF] Exiting application
+2022-02-07 13:51:34.423 -08:00 [INF] Displaying Adding customer Menu to user
+2022-02-07 13:52:06.430 -08:00 [INF] Displaying Adding customer Menu to user
+2022-02-07 13:52:15.205 -08:00 [INF] Displaying Adding customer Menu to user
+2022-02-07 13:52:35.949 -08:00 [INF] Displaying Adding customer Menu to user
+2022-02-07 13:52:55.404 -08:00 [INF] Displaying Adding customer Menu to user
+2022-02-07 13:52:57.009 -08:00 [INF] Adding Customer 
+Customer ID: 0 
+Customer Name: Thor
+ Customer Address: Asgard, planet 78943
+ Customer Email: godofthunder@email.com
+ Customer Contact number: 444-666-7894
+2022-02-07 13:52:57.699 -08:00 [INF] Successful at adding customer!
+2022-02-07 13:53:05.799 -08:00 [INF] Displaying Search product Menu to user
+2022-02-07 13:53:17.844 -08:00 [INF] Displaying Search Customer Menu to user
+2022-02-07 13:53:34.794 -08:00 [INF] Displaying Search Customer Menu to user
+2022-02-07 13:53:51.519 -08:00 [INF] Displaying Search Customer Menu to user
+2022-02-07 13:54:01.958 -08:00 [INF] Exiting application
+2022-02-07 13:54:16.931 -08:00 [INF] Displaying Adding product Menu to user
+2022-02-07 13:54:50.078 -08:00 [INF] Displaying Adding product Menu to user
+2022-02-07 13:54:56.469 -08:00 [INF] Displaying Adding product Menu to user
+2022-02-07 13:54:57.563 -08:00 [INF] Adding Product 
+Product ID: 0 
+Product Name: Tires
+ Price: 110
+2022-02-07 13:54:58.303 -08:00 [INF] Successful at adding Product!
+2022-02-07 13:55:08.617 -08:00 [INF] Displaying Adding Inventory Menu to user
+2022-02-07 13:55:15.233 -08:00 [INF] Displaying Adding Inventory Menu to user
+2022-02-07 13:55:23.467 -08:00 [INF] Displaying Adding Inventory Menu to user
+2022-02-07 13:55:26.273 -08:00 [INF] Adding Inventory 
+Inventory ID : 1
+ Quantity : 30
+2022-02-07 13:55:26.304 -08:00 [INF] Successful at adding Inventory!
+2022-02-07 13:55:28.028 -08:00 [INF] Exiting application
+2022-02-07 13:55:38.140 -08:00 [INF] Displaying Search invetory store Menu to user
+2022-02-07 13:57:14.871 -08:00 [INF] Exiting application
+2022-02-07 13:57:21.324 -08:00 [INF] Displaying Search invetory store Menu to user
+2022-02-07 13:58:02.691 -08:00 [INF] Displaying Adding Inventory Menu to user
+2022-02-07 13:58:08.676 -08:00 [INF] Displaying Adding Inventory Menu to user
+2022-02-07 13:58:11.090 -08:00 [INF] Displaying Adding Inventory Menu to user
+2022-02-07 13:58:15.441 -08:00 [INF] Displaying Adding Inventory Menu to user
+2022-02-07 13:58:16.911 -08:00 [INF] Adding Inventory 
+Inventory ID : 1
+ Quantity : 14
+2022-02-07 13:58:16.960 -08:00 [INF] Successful at adding Inventory!
+2022-02-07 13:58:18.201 -08:00 [INF] Exiting application
+2022-02-07 13:58:24.563 -08:00 [INF] Displaying Search invetory store Menu to user
+2022-02-07 13:58:35.451 -08:00 [INF] Exiting application
+2022-02-08 11:40:00.394 -08:00 [INF] Displaying Search invetory store Menu to user
+2022-02-08 11:40:16.532 -08:00 [INF] Exiting application
+2022-02-08 12:34:32.881 -08:00 [INF] Exiting application
+2022-02-08 12:35:34.082 -08:00 [INF] Displaying Search Order Menu to user
+2022-02-08 12:35:42.434 -08:00 [INF] Displaying Search Order Menu to user
+2022-02-08 12:35:54.239 -08:00 [INF] Exiting application
