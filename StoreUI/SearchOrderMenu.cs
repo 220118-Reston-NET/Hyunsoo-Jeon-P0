@@ -32,7 +32,7 @@ namespace StoreUI
 
                     try
                     {
-                        int orderID = Convert.ToInt32(Console.ReadLine());
+                        //int orderID = Convert.ToInt32(Console.ReadLine());
                         List<Order> listOfOrder = _orderBL.GetAllOrder();
                         foreach(var item in listOfOrder)
                         {

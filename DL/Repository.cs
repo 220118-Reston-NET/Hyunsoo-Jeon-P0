@@ -98,5 +98,10 @@ namespace DL
         {
             throw new NotImplementedException();
         }
+
+        public Order PlaceOrder(int p_storeId, int p_customerID, int p_totalPrice, List<LineItems> p_lineItem)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

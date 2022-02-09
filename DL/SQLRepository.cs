@@ -280,6 +280,46 @@ namespace DL
             }
             return _listOfOrder;
         }
-        
+
+        public Order PlaceOrder(int p_storeId, int p_customerID, int p_totalPrice, List<LineItems> p_lineItem)
+        {
+            string sqlQueryOrder = @"insert into Orders
+                            values(@orderId, @orderTotalPrice, @storeId, @customerID)";
+
+            string sqlQueryLineItem = @"insert into LineItem
+                                    values(@qty, @orderId, @productId)";
+
+            Order _newOrder = new Order();
+
+
+            using(SqlConnection con = new SqlConnection(_connectionStrings))
+            {
+                con.Open();
+
+                SqlCommand command = new SqlCommand(sqlQueryOrder, con);
+                command.Parameters.AddWithValue("@orderId", _newOrder.OrderID);
+                command.Parameters.AddWithValue("@orderTotalPrice", p_totalPrice);
+                command.Parameters.AddWithValue("@storeId", p_storeId);
+                command.Parameters.AddWithValue("@customerID", p_customerID);
+
+                command.ExecuteNonQuery();
+
+                foreach(var item in p_lineItem)
+                {
+                    command = new SqlCommand(sqlQueryLineItem, con);
+                    command.Parameters.AddWithValue("@qty", item.Qty);
+                    command.Parameters.AddWithValue("@orderId", _newOrder.OrderID);
+                    command.Parameters.AddWithValue("@productId", item.ProductID);
+
+                    command.ExecuteNonQuery();
+
+                }
+            
+            }
+
+            return _newOrder;
+        }
+
     }
 }
+

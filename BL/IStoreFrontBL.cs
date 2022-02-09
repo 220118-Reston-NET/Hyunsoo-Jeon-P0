@@ -7,5 +7,6 @@ namespace BL
         StoreFront AddStoreFront(StoreFront p_storeFront);
 
         List<StoreFront> SearchStoreFront(string p_name);
+        List<StoreFront> GetAllStoreFront();
     }
 }

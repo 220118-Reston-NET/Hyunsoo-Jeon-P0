@@ -185,3 +185,13 @@ Inventory ID : 1
 2022-02-08 12:35:34.082 -08:00 [INF] Displaying Search Order Menu to user
 2022-02-08 12:35:42.434 -08:00 [INF] Displaying Search Order Menu to user
 2022-02-08 12:35:54.239 -08:00 [INF] Exiting application
+2022-02-08 12:37:53.403 -08:00 [INF] Displaying Search Order Menu to user
+2022-02-08 12:38:05.220 -08:00 [INF] Displaying Search Order Menu to user
+2022-02-08 12:38:50.161 -08:00 [INF] Exiting application
+2022-02-08 12:38:56.883 -08:00 [INF] Displaying Search Order Menu to user
+2022-02-08 12:39:01.726 -08:00 [INF] Exiting application
+2022-02-08 12:43:07.505 -08:00 [INF] Displaying Search product Menu to user
+2022-02-08 12:43:20.493 -08:00 [INF] Exiting application
+2022-02-09 10:12:41.841 -08:00 [INF] Displaying Search Order Menu to user
+2022-02-09 10:12:54.527 -08:00 [INF] Exiting application
+2022-02-09 10:26:43.422 -08:00 [INF] Exiting application

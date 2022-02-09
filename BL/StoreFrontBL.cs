@@ -26,6 +26,11 @@ namespace BL
 
         }
 
+        public List<StoreFront> GetAllStoreFront()
+        {
+            return _repo.GetAllStoreFront();
+        }
+
         public List<StoreFront> SearchStoreFront(string p_storeFrontName)
         {   
             List<StoreFront> listOfStoreFront = _repo.GetAllStoreFront();
