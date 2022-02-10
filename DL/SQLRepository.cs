@@ -162,7 +162,7 @@ namespace DL
                         InventoryID = reader.GetInt32(0),
                         Qty = reader.GetInt32(1),
                         StoreID = reader.GetInt32(2),
-                        ProductID = reader.GetInt32(3)
+                        ProductID = reader.GetInt32(3),
                     });
                 }
 
@@ -230,8 +230,10 @@ namespace DL
         {
                      
             List<Product> _listOfInventory = new List<Product>();
-            string sqlQuery = @"select p.productId, p.productName, p.productPrice from Product p, Inventory i
-                                where p.productId = i.productId and i.storeId = @storeId";
+            string sqlQuery = @"select p.productId, p.productName, p.productPrice, i.qty from Product p
+                            inner join Inventory i on p.productId = i.productId 
+                            inner join StoreFront sf on sf.storeId = i.storeId
+                            where i.productId = p.productId AND i.storeId = @storeId";
 
             using(SqlConnection con = new SqlConnection(_connectionStrings))
             {
@@ -247,7 +249,8 @@ namespace DL
                      _listOfInventory.Add(new Product(){
                         ProductID = reader.GetInt32(0),
                         ProductName = reader.GetString(1),
-                        Price = reader.GetInt32(2)
+                        Price = reader.GetInt32(2),
+                        
                     });
                 }
             }

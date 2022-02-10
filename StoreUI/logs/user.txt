@@ -195,3 +195,32 @@ Inventory ID : 1
 2022-02-09 10:12:41.841 -08:00 [INF] Displaying Search Order Menu to user
 2022-02-09 10:12:54.527 -08:00 [INF] Exiting application
 2022-02-09 10:26:43.422 -08:00 [INF] Exiting application
+2022-02-09 11:12:28.167 -08:00 [INF] Exiting application
+2022-02-09 11:27:20.809 -08:00 [INF] Exiting application
+2022-02-09 12:25:15.109 -08:00 [INF] Displaying Search invetory store Menu to user
+2022-02-09 12:25:55.696 -08:00 [INF] Displaying Search invetory store Menu to user
+2022-02-09 12:26:58.861 -08:00 [INF] Exiting application
+2022-02-09 12:33:06.720 -08:00 [INF] Displaying Search invetory store Menu to user
+2022-02-09 12:48:11.691 -08:00 [INF] Exiting application
+2022-02-09 12:48:24.248 -08:00 [INF] Displaying Search invetory store Menu to user
+2022-02-09 12:49:01.145 -08:00 [INF] Displaying Search invetory store Menu to user
+2022-02-09 12:49:09.500 -08:00 [INF] Exiting application
+2022-02-09 13:18:17.303 -08:00 [INF] Exiting application
+2022-02-09 13:31:06.136 -08:00 [INF] Exiting application
+2022-02-09 13:32:20.416 -08:00 [INF] Exiting application
+2022-02-09 13:51:59.002 -08:00 [INF] Exiting application
+2022-02-10 08:19:55.394 -08:00 [INF] Exiting application
+2022-02-10 08:20:11.760 -08:00 [INF] Displaying Search invetory store Menu to user
+2022-02-10 08:20:20.293 -08:00 [INF] Displaying Search invetory store Menu to user
+2022-02-10 08:20:39.312 -08:00 [INF] Exiting application
+2022-02-10 08:28:33.010 -08:00 [INF] Exiting application
+2022-02-10 08:39:26.059 -08:00 [INF] Exiting application
+2022-02-10 08:39:37.085 -08:00 [INF] Displaying Search invetory store Menu to user
+2022-02-10 08:39:58.352 -08:00 [INF] Exiting application
+2022-02-10 08:40:07.774 -08:00 [INF] Displaying Search product Menu to user
+2022-02-10 08:47:41.834 -08:00 [INF] Exiting application
+2022-02-10 08:49:50.413 -08:00 [INF] Exiting application
+2022-02-10 08:53:06.236 -08:00 [INF] Exiting application
+2022-02-10 08:57:39.759 -08:00 [INF] Exiting application
+2022-02-10 08:57:50.514 -08:00 [INF] Exiting application
+2022-02-10 09:04:24.860 -08:00 [INF] Exiting application

@@ -21,9 +21,15 @@ namespace StoreUI
         {
             _productBL = p_productBL;
         }
-
+        private List<Inventory> listOfInventory; 
         public void Display()
        {
+           listOfInventory = _inventoryBL.GetAllInventory();
+            foreach(var item in listOfInventory)
+            {
+                Console.WriteLine("********************");
+                Console.WriteLine(item);
+            }
             Console.WriteLine("Please enter store id database");
             Console.WriteLine("[1] Store ID");
             Console.WriteLine("[0] Go back");

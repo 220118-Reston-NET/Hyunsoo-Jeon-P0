@@ -6,15 +6,28 @@ namespace StoreUI
     public class PlaceOrderStoreMenu : IMenu
     {
         private IStoreFrontBL _storeFrontBL;
-        public PlaceOrderStoreMenu(IStoreFrontBL p__storeFrontBL)
+        public PlaceOrderStoreMenu(IStoreFrontBL p_storeFrontBL)
         {
-            _storeFrontBL = p__storeFrontBL;
+            _storeFrontBL = p_storeFrontBL;
         }
 
+        public static StoreFront _storeNameSelect = new StoreFront();
+        private List<StoreFront> _listOfStoreFront;
+        private List<Product> _listOfProduct;
+
+        public void StoreFront_ProductDisplay(){
+            _listOfStoreFront = _storeFrontBL.GetAllStoreFront();
+            foreach(var item in _listOfStoreFront)
+            {
+                Console.WriteLine("********************");
+                Console.WriteLine(item);
+            }
+        }
         public void Display()
         {
-            Console.WriteLine("Check all stores");
-            Console.WriteLine("[1] view stores");
+            StoreFront_ProductDisplay();
+            Console.WriteLine("********************");
+            Console.WriteLine("Press Store Name to contine order");
             Console.WriteLine("[0] Go back");
         }
 
@@ -26,31 +39,18 @@ namespace StoreUI
             {
                 case "0":
                     return "CustomerMenu";
-                case "1":
-                    try
-                    {
-                        List<StoreFront> listOfStoreFront = _storeFrontBL.GetAllStoreFront();
-                    foreach(var item in listOfStoreFront)
-                    {
-                        Console.WriteLine("********************");
-                        Console.WriteLine(item);
-                    }
-                    Console.WriteLine("Please press Enter to continue");
-                    Console.ReadLine();
-
-                    return "CustomerMenu";
-                    }
-                    catch (System.Exception)
-                    {
-                        Console.WriteLine("Please press Enter to continue");
-                        Console.ReadLine();
-                    }
-                    return "CustomerMenu";
                 default:
+                    foreach(var item in _listOfStoreFront)
+                    {
+                        if(userInput == item.StoreName)
+                        {
+                            _storeNameSelect = item;
+                            return "PlaceOrderDetail";
+                        }
+                    }
                     Console.WriteLine("Please press Enter to continue");
                     Console.ReadLine();
-                    return "CustomerMenu";          
-                
+                    return "PlaceOrderStore";          
             }
         }
     }
