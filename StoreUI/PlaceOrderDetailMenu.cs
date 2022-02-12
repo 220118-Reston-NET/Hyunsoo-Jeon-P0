@@ -7,79 +7,118 @@ namespace StoreUI
     {
         private IOrderBL _orderBL;
         private IInventoryBL _inventoryBL;
-        private IStoreFrontBL _storeFrontBL;
-        public PlaceOrderDetailMenu(IOrderBL p_orderBL, IInventoryBL p_inventoryBL, IStoreFrontBL p_storeFrontBL)
+        public PlaceOrderDetailMenu( IInventoryBL p_inventoryBL, IOrderBL p_orderBL)
         {
-            _orderBL = p_orderBL;
             _inventoryBL = p_inventoryBL;
-            _storeFrontBL = p_storeFrontBL;
-        }
+            _orderBL = p_orderBL;
+            _listOfInventory = _inventoryBL.GetAllInventoryDetailInStoreByID(PlaceOrderStoreMenu._storeID);
+            _listOfProduct = _inventoryBL.GetAllproductDetailByStoreID(PlaceOrderStoreMenu._storeID);
+      }
 
-        private List<Inventory> listOfInventory = new List<Inventory>();
-        private List<Product> listOfProduct = new List<Product>();
-        private List<LineItems> newOrder = new List<LineItems>();
-        private static List<Customer> newCustomer = new List<Customer>();
-        private List<StoreFront> _listOfStoreFront = new List<StoreFront>();
-        private OrderBL orderBL;
-        public void StoreListDisplay(){
-            Console.WriteLine("Check Store list");
-            _listOfStoreFront = _storeFrontBL.GetAllStoreFront();
-            foreach(var item in _listOfStoreFront)
+        // public static Customer _storeNameSelect = new StoreFront();
+        private List<Inventory> _listOfInventory;
+        private List<Product> _listOfProduct;
+        private static List<LineItems> _cart = new List<LineItems>();
+
+        public void StoreProduct_Display()
+        {
+            
+            foreach (var item in _listOfProduct)
             {
                 Console.WriteLine("********************");
                 Console.WriteLine(item);
+
+                Console.WriteLine("Quantity " + _listOfInventory.Find(p => p.ProductID == item.ProductID).Qty);
             }
         }
-
-        
         public void Display()
         {
-            StoreListDisplay();
+            StoreProduct_Display();
+
             Console.WriteLine("********************");
-            Console.WriteLine("Let's start order!");
-            Console.WriteLine("[1] View Store Inventory / Check Store Id");
+            Console.WriteLine("[2] Place Order");
+            Console.WriteLine("[1] Press Product Name to contine order");
             Console.WriteLine("[0] Go back");
+            if(_cart.Count() != 0)
+            {
+                Console.WriteLine("In your cart");
+                foreach(var item in _cart)
+                {
+                    Console.WriteLine(item);
+                }
+            }
         }
 
         public string UserChoice()
         {
             string userInput = Console.ReadLine();
 
-            switch(userInput)
+            switch (userInput)
             {
                 case "0":
-                    return "CustomerMenu";
-
+                    return "PlaceOrderCustomer";
                 case "1":
-                    Console.WriteLine("Please enter a Store ID");
-                    try
-                    {
-                        int storeID = Convert.ToInt32(Console.ReadLine());
-                        List<Product> listOfStoreProduct = _inventoryBL.GetAllInventoryDetailInStoreByID(storeID);
-                        foreach(var item in listOfStoreProduct)
-                        {
-                            Console.WriteLine("====================");
-                            Console.WriteLine(item);
-                        }
-                        Console.WriteLine("Please press Enter to continue");
-                        Console.ReadLine();
+                    Console.WriteLine("Enter the product name");
+                    string inputName =Console.ReadLine();
 
-                        return "PlaceOrderDetail";
-                    }
-                    catch (FormatException)
+                    while (_listOfProduct.All(p => p.ProductName != inputName))
                     {
-                        Console.WriteLine("Please input a valid response");
+                        Console.WriteLine("You product name is not vaildate! Try again!");
+                        inputName = Console.ReadLine();
+                    
+                    }
+                    Console.WriteLine("Enter the product quantity");
+
+                    string qty = Console.ReadLine();
+                    while(qty != "" && !qty.All(Char.IsDigit))
+                    {
+                        
+                        Console.WriteLine("You product quantity is not vaildate! Try again!");
+                        qty = Console.ReadLine();
+                    }
+
+                    int currentProductId = _listOfProduct.Find(p => p.ProductName == inputName).ProductID;
+
+                    if(Convert.ToInt32(qty) > _listOfInventory.Find(p => p.ProductID == currentProductId).Qty)
+                    {
+                        Console.WriteLine("Your Quantity is larger value than inventory!");
                         Console.WriteLine("Please press Enter to continue");
                         Console.ReadLine();
                         return "PlaceOrderDetail";
                     }
+
+                    _cart.Add(new LineItems(){
+                        ProductID = _listOfProduct.Find(p => p.ProductName == inputName).ProductID,
+                        ProductName = inputName,
+                        Qty = Convert.ToInt32(qty),
+                        Price = _listOfProduct.Find(p => p.ProductName == inputName).Price
+
+                    });
                     return "PlaceOrderDetail";
-                default:
-                    
+                case "2":
+                    if(_cart.Count()== 0)
+                    {
+                        Console.WriteLine("Your cart is empty! go Shopping!");
+                        Console.WriteLine("Please press Enter to continue");
+                        Console.ReadLine();
+                        return "PlaceOrderDetail";
+                    }
+                    int _totalPrice = 0;
+                    foreach(var item in _cart)
+                    {
+                        _totalPrice += item.Price * item.Qty;
+                    }
+
+                    _orderBL.PlaceOrder(PlaceOrderStoreMenu._storeID, PlaceOrderCustomerMenu._customerID, _totalPrice, _cart);
+                    Console.WriteLine("Your Order is Success!");
                     Console.WriteLine("Please press Enter to continue");
                     Console.ReadLine();
-                    return "PlaceOrderDetail";          
-                
+                    return "MainMenu";
+                default:
+
+                    Console.WriteLine("Please press Enter to continue");
+                    Console.ReadLine();
+                    return "PlaceOrderDetail";
             }
         }
     }

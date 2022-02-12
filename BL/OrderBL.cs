@@ -17,9 +17,15 @@ namespace BL
             return _repo.GetAllOrder();
         }
 
-        public Order PlaceOrder(int p_storeId, int p_customerID, int p_totalPrice, List<LineItems> p_lineItem)
+        public void PlaceOrder(int p_storeId, int p_customerID, int p_totalPrice, List<LineItems> p_lineItem)
         {
-            return _repo.PlaceOrder(p_storeId, p_customerID, p_totalPrice, p_lineItem);
+            _repo.PlaceOrder(p_storeId, p_customerID, p_totalPrice, p_lineItem);
         }
+
+        public List<Order> GetAllOrdersByID(int p_customerID)
+        {
+            return _repo.GetAllOrdersByID(p_customerID);
+        }
+
     }
 }

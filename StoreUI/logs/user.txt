@@ -224,3 +224,40 @@ Inventory ID : 1
 2022-02-10 08:57:39.759 -08:00 [INF] Exiting application
 2022-02-10 08:57:50.514 -08:00 [INF] Exiting application
 2022-02-10 09:04:24.860 -08:00 [INF] Exiting application
+2022-02-10 09:23:27.909 -08:00 [INF] Exiting application
+2022-02-10 10:10:26.232 -08:00 [INF] Exiting application
+2022-02-10 11:04:21.877 -08:00 [INF] Exiting application
+2022-02-10 11:39:27.753 -08:00 [INF] Exiting application
+2022-02-10 11:42:18.375 -08:00 [INF] Exiting application
+2022-02-10 12:18:55.256 -08:00 [INF] Exiting application
+2022-02-10 12:19:24.401 -08:00 [INF] Exiting application
+2022-02-11 11:32:56.181 -08:00 [INF] Exiting application
+2022-02-11 11:58:36.357 -08:00 [INF] Exiting application
+2022-02-11 12:05:12.775 -08:00 [INF] Exiting application
+2022-02-11 13:02:52.883 -08:00 [INF] Exiting application
+2022-02-11 13:07:22.369 -08:00 [INF] Exiting application
+2022-02-11 13:34:27.641 -08:00 [INF] Exiting application
+2022-02-11 14:16:46.167 -08:00 [INF] Exiting application
+2022-02-11 14:16:59.501 -08:00 [INF] Displaying Adding product Menu to user
+2022-02-11 14:17:11.274 -08:00 [INF] Displaying Adding Inventory Menu to user
+2022-02-11 14:17:25.029 -08:00 [INF] Displaying Adding Inventory Menu to user
+2022-02-11 14:17:27.879 -08:00 [INF] Displaying Adding Inventory Menu to user
+2022-02-11 14:17:33.233 -08:00 [INF] Displaying Adding Inventory Menu to user
+2022-02-11 14:17:34.704 -08:00 [INF] Adding Inventory 
+Inventory ID : 1
+ Store ID: 3 Product ID: 1 
+ Quantity : 10
+2022-02-11 14:17:35.336 -08:00 [INF] Successful at adding Inventory!
+2022-02-11 14:18:16.554 -08:00 [INF] Displaying Adding Inventory Menu to user
+2022-02-11 14:18:20.948 -08:00 [INF] Displaying Adding Inventory Menu to user
+2022-02-11 14:18:24.024 -08:00 [INF] Displaying Adding Inventory Menu to user
+2022-02-11 14:18:25.313 -08:00 [INF] Adding Inventory 
+Inventory ID : 1
+ Store ID: 3 Product ID: 2 
+ Quantity : 6
+2022-02-11 14:18:25.344 -08:00 [INF] Successful at adding Inventory!
+2022-02-11 14:19:35.168 -08:00 [INF] Displaying Search product Menu to user
+2022-02-11 14:20:54.742 -08:00 [INF] Exiting application
+2022-02-11 15:00:42.202 -08:00 [INF] Exiting application
+2022-02-11 15:20:36.811 -08:00 [INF] Exiting application
+2022-02-11 15:22:49.785 -08:00 [INF] Exiting application

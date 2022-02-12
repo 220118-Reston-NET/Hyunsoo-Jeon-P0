@@ -49,7 +49,7 @@ namespace StoreUI
                         Console.WriteLine("Please enter a store ID");
                         int storeId = Convert.ToInt32(Console.ReadLine());
 
-                        List<Product> listOfProduct = _inventoryBL.GetAllInventoryDetailInStoreByID(storeId);
+                        List<Inventory> listOfProduct = _inventoryBL.GetAllInventoryDetailInStoreByID(storeId);
                         foreach(var item in listOfProduct)
                         {
                             Console.WriteLine("********************");

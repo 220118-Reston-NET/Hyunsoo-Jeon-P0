@@ -3,7 +3,7 @@ using Models;
 
 namespace DL
 {
-    public class Repository : IRepository
+    public class Repository
     {
         private string _filepath = "../DL/Database/";
         private string _jsonString;
@@ -83,12 +83,6 @@ namespace DL
             throw new NotImplementedException();
         }
 
-
-        Inventory IRepository.AddInventory(Inventory p_inventory)
-        {
-            throw new NotImplementedException();
-        }
-
         public List<Product> GetAllInventoryDetailInStoreByID(int p_storeId)
         {
             throw new NotImplementedException();
@@ -99,7 +93,12 @@ namespace DL
             throw new NotImplementedException();
         }
 
-        public Order PlaceOrder(int p_storeId, int p_customerID, int p_totalPrice, List<LineItems> p_lineItem)
+        public void PlaceOrder(int p_storeId, int p_customerID, int p_totalPrice, List<LineItems> p_lineItem)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Order> GetAllOrdersByID(int p_customerID)
         {
             throw new NotImplementedException();
         }

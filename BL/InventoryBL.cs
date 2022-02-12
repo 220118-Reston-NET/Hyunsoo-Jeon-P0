@@ -22,9 +22,14 @@ namespace BL
             return _repo.AddInventory(p_inventory);
         }
 
-        public List<Product> GetAllInventoryDetailInStoreByID(int p_storeId)
+        public List<Inventory> GetAllInventoryDetailInStoreByID(int p_storeId)
         {
-            return _repo.GetAllInventoryDetailInStoreByID(p_storeId);
+            return GetAllInventory().Where(p => p.StoreID.Equals(p_storeId)).ToList();
+        }
+
+        public List<Product> GetAllproductDetailByStoreID(int p_storeId)
+        {
+           return _repo.GetAllproductDetailByStoreID(p_storeId);
         }
     }
 }

@@ -24,10 +24,11 @@ while(repeat){
     string ans = menu.UserChoice();
 
     switch(ans){
-        case "PlaceOrderDetail":
-            menu = new PlaceOrderDetailMenu(new OrderBL(new SQLRepository(_connectionString)), 
-                    new InventoryBL(new SQLRepository(_connectionString)), 
-                    new StoreFrontBL(new SQLRepository(_connectionString)));
+        case "PlaceOrderDetail": 
+            menu = new PlaceOrderDetailMenu(new InventoryBL(new SQLRepository(_connectionString)),new OrderBL(new SQLRepository(_connectionString)));                 
+            break;
+        case "PlaceOrderCustomer":
+            menu = new PlaceOrderCustomerMenu(new CustomerBL(new SQLRepository(_connectionString)));
             break;
         case "PlaceOrderStore":
             menu = new PlaceOrderStoreMenu(new StoreFrontBL(new SQLRepository(_connectionString)));

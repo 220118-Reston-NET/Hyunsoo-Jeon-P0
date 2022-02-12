@@ -31,11 +31,18 @@ namespace BL
             return _repo.GetAllProduct();
         }
 
+        // public List<Product> GetAllProdctByStoreID(int storeID)
+        // {
+        //     return GetAllProdct().Where(p => p.);
+        // }
+
         public List<Product> SearchProduct(string p_productName)
         {   
             List<Product> listOfProduct = _repo.GetAllProduct();
 
             return listOfProduct.Where(product => product.ProductName.Contains(p_productName)).ToList();
         }
+
+        
     }
 }

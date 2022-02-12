@@ -21,9 +21,9 @@ namespace StoreUI
                     return "MainMenu";
                 case "1":
                     return "SearchProduct";
-                // case "2":
-                //     return "PlaceOrderStore";
                 case "2":
+                    return "PlaceOrderStore";
+                case "3":
                     return "PlaceOrderDetail";
                 default:
                     Console.WriteLine("Please input a valid response");

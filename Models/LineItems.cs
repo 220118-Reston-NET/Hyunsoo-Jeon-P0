@@ -2,8 +2,8 @@ namespace Models
 {
     public class LineItems
     {
-        public string ProductID { get; set; }
-        public string OrderId { get; set; }
+        public int ProductID { get; set; }
+        public int OrderId { get; set; }
         public string ProductName { get; set; }
         public int Price { get; set; }           
         public int Qty { get; set; }
