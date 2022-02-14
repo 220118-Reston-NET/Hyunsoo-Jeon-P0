@@ -143,6 +143,33 @@ namespace DL
             return listOfProduct;
         }
 
+        public List<Product> GetAllProductByProductID(int p_productId)
+        {
+            List<Product> listOfProductDetail = new List<Product>();
+            string sqlQuery = @"select * from product p
+                                where p.productId = @productId";
+
+            using (SqlConnection con = new SqlConnection(_connectionStrings))
+            {
+                con.Open();
+
+                SqlCommand command = new SqlCommand(sqlQuery, con);
+                command.Parameters.AddWithValue("@productId", p_productId);
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    listOfProductDetail.Add(new Product()
+                    {
+                        ProductID = reader.GetInt32(0),
+                        ProductName = reader.GetString(1),
+                        Price = reader.GetInt32(2)
+                    });
+                }
+            }
+            return listOfProductDetail;
+        }
         public List<Inventory> GetAllInventory()
         {
             List<Inventory> _listOfinventory = new List<Inventory>();
@@ -266,7 +293,7 @@ namespace DL
         {
             List<Order> _listOfOrder = new List<Order>();
 
-            string sqlQuery = @"select max(o.orderId) from Orders o";
+            string sqlQuery = @"select * from Orders o";
 
             using (SqlConnection con = new SqlConnection(_connectionStrings))
             {
@@ -290,19 +317,19 @@ namespace DL
             return _listOfOrder;
         }
 
-        public List<Order> GetAllOrdersByID(int p_customerID)
+        public List<Order> GetAllOrdersByID(int p_customerId)
         {
-
             List<Order> _listOfOrder = new List<Order>();
             string sqlQuery = @"select * from Orders o 
-                                where o.customerID = @customerId";
+                                where o.customerId = @customerId
+                                order by orderId desc";
 
             using (SqlConnection con = new SqlConnection(_connectionStrings))
             {
                 con.Open();
 
                 SqlCommand command = new SqlCommand(sqlQuery, con);
-                command.Parameters.AddWithValue("@customerId", p_customerID);
+                command.Parameters.AddWithValue("@customerId", p_customerId);
 
                 SqlDataReader reader = command.ExecuteReader();
 
@@ -395,6 +422,7 @@ namespace DL
             }
             return _newListProduct;
         }
+
     }
 }
 

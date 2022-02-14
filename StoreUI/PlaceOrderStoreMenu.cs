@@ -6,18 +6,29 @@ namespace StoreUI
     public class PlaceOrderStoreMenu : IMenu
     {
         private IStoreFrontBL _storeFrontBL;
-        public PlaceOrderStoreMenu(IStoreFrontBL p_storeFrontBL)
+        private ICustomerBL _customerBL;
+        public PlaceOrderStoreMenu(IStoreFrontBL p_storeFrontBL, ICustomerBL p_customerBL)
         {
             _storeFrontBL = p_storeFrontBL;
+            _customerBL = p_customerBL;
             _listOfStoreFront = _storeFrontBL.GetAllStoreFront();
+            _listOfCustomer = _customerBL.GetCustomerByCustomerID(PlaceOrderCustomerMenu._customerID);
 
         }
 
         public static StoreFront _storeNameSelect = new StoreFront();
         private List<StoreFront> _listOfStoreFront;
-        private List<Product> _listOfProduct;
+        private List<Customer> _listOfCustomer;
+
         public static int _storeID;
 
+        public void CustomerWelcome_Display()
+        {
+            foreach (var item in _listOfCustomer)
+            {
+                Console.WriteLine("Welcom " + item.Name);
+            }
+        }
         public void StoreFront_ProductDisplay(){
             foreach(var item in _listOfStoreFront)
             {
@@ -27,9 +38,11 @@ namespace StoreUI
         }
         public void Display()
         {
+            CustomerWelcome_Display();
             StoreFront_ProductDisplay();
 
             Console.WriteLine("********************");
+            Console.WriteLine("[2] View Orders");
             Console.WriteLine("[1] Press Store ID to contine order");
             Console.WriteLine("[0] Go back");
         }
@@ -52,10 +65,10 @@ namespace StoreUI
                             _storeID = Convert.ToInt32(Console.ReadLine());
                             
                         }
-
-                    
-                return "PlaceOrderCustomer";
-
+                   
+                return "PlaceOrderDetail";
+                case "2":
+                   return "ViewOrderHistory";
             default:
                     Console.WriteLine("Please press Enter to continue");
                     Console.ReadLine();

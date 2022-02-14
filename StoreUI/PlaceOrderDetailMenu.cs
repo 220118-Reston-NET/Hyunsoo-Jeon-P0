@@ -15,11 +15,12 @@ namespace StoreUI
             _listOfProduct = _inventoryBL.GetAllproductDetailByStoreID(PlaceOrderStoreMenu._storeID);
       }
 
-        // public static Customer _storeNameSelect = new StoreFront();
         private List<Inventory> _listOfInventory;
         private List<Product> _listOfProduct;
         private static List<LineItems> _cart = new List<LineItems>();
 
+
+ 
         public void StoreProduct_Display()
         {
             
@@ -36,6 +37,7 @@ namespace StoreUI
             StoreProduct_Display();
 
             Console.WriteLine("********************");
+            Console.WriteLine("[3] View order detail");
             Console.WriteLine("[2] Place Order");
             Console.WriteLine("[1] Press Product Name to contine order");
             Console.WriteLine("[0] Go back");
@@ -113,7 +115,9 @@ namespace StoreUI
                     Console.WriteLine("Your Order is Success!");
                     Console.WriteLine("Please press Enter to continue");
                     Console.ReadLine();
-                    return "MainMenu";
+                    return "ViewOrderHistory";
+                case "3":
+                    return "ViewOrderHistory";
                 default:
 
                     Console.WriteLine("Please press Enter to continue");

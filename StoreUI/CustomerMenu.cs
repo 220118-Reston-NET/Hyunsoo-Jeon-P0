@@ -6,7 +6,7 @@ namespace StoreUI
         {
             Console.WriteLine("Good Day! ");
             Console.WriteLine("What would you like to do?");
-            Console.WriteLine("[2] Start Order");
+            Console.WriteLine("[2] Log in");
             Console.WriteLine("[1] Search Product");
             Console.WriteLine("[0] Go back");
         }
@@ -22,9 +22,7 @@ namespace StoreUI
                 case "1":
                     return "SearchProduct";
                 case "2":
-                    return "PlaceOrderStore";
-                case "3":
-                    return "PlaceOrderDetail";
+                    return "PlaceOrderCustomer";
                 default:
                     Console.WriteLine("Please input a valid response");
                     Console.WriteLine("Please press Enter to continue");
