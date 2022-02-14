@@ -24,10 +24,8 @@ namespace StoreUI
         }
         public void Display()
         {
-            //StoreFront_ProductDisplay();
             All_Order_Display();
             Console.WriteLine("********************");
-            //Console.WriteLine("[1] Press Store ID to contine order");
             Console.WriteLine("[0] Go back");
         }
 
@@ -39,20 +37,6 @@ namespace StoreUI
             {
                 case "0":
                     return "PlaceOrderStore";
-                // case "1":
-                //     Console.WriteLine("Enter Store ID");
-                //     _storeID = Convert.ToInt32(Console.ReadLine());
-
-                //     while (_listOfStoreFront.All(p => p.StoreID != _storeID))
-                //     {
-                //         Console.WriteLine("You Id is not vaildate! Try again!");
-                //         _storeID = Convert.ToInt32(Console.ReadLine());
-
-                //     }
-
-
-                //     return "PlaceOrderCustomer";
-
                 default:
                     Console.WriteLine("Please press Enter to continue");
                     Console.ReadLine();

@@ -24,6 +24,12 @@ while(repeat){
     string ans = menu.UserChoice();
 
     switch(ans){
+        case "RestockInventory":
+            menu = new RestockInventoryMenu(new InventoryBL(new SQLRepository(_connectionString)));
+            break;
+        case "RestockInventoryDetail":
+            menu = new RestockInventoryDetailMenu(new InventoryBL(new SQLRepository(_connectionString)));
+            break;
         case "ViewOrderHistory":
             menu = new ViewOrderHistoryMenu(new OrderBL(new SQLRepository(_connectionString)));
             break;            
@@ -82,6 +88,12 @@ while(repeat){
             break;
         case "AdminMenu":
             menu = new AdminMenu();
+            break;
+        case "AdminAddMenu":
+            menu = new AdminAddMenu();
+            break;
+        case "AdminSearchMenu":
+            menu = new AdminSearchMenu();
             break;
         case "Exit":
             Log.Information("Exiting application");

@@ -31,5 +31,15 @@ namespace BL
         {
            return _repo.GetAllproductDetailByStoreID(p_storeId);
         }
+
+        public void ReplenishInventory(int p_inventoryId, int p_qty)
+        {
+            _repo.ReplenishInventory(p_inventoryId, p_qty);
+        }
+        public List<Inventory> GetAllInventoryByID(int p_inventoryId)
+        {
+            return _repo.GetAllInventoryByID(p_inventoryId);
+        }
+
     }
 }

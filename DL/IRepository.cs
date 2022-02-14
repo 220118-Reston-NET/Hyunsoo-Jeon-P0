@@ -24,6 +24,8 @@ namespace DL
         List<Order> GetAllOrdersByID(int p_customerID);
 
         List<Product> GetAllproductDetailByStoreID(int p_storeId);
+        void ReplenishInventory(int p_inventoryId, int p_qty);
+        public List<Inventory> GetAllInventoryByID(int p_inventoryId);
 
     }
 }

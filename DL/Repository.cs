@@ -102,5 +102,16 @@ namespace DL
         {
             throw new NotImplementedException();
         }
+
+        public void ReplenishInventory(int p_inventoryId, int p_qty)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Inventory> GetAllInventoryByID(int p_inventoryId)
+        {
+            throw new NotImplementedException();
+
+        }
     }
 }

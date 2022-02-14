@@ -200,6 +200,39 @@ namespace DL
             return _listOfinventory;
         }
 
+        public List<Inventory>GetAllInventoryByID(int p_inventoryId)
+        {
+            List<Inventory> _listOfInventory = new List<Inventory>();
+
+            string sqlQuery = @"select * from Inventory
+                                where inventoryId = @inventoryId";
+
+            using(SqlConnection con = new SqlConnection(_connectionStrings))
+            {
+                con.Open();
+
+                SqlCommand command = new SqlCommand(sqlQuery, con);
+                command.Parameters.AddWithValue("@inventoryId", p_inventoryId);
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    _listOfInventory.Add(new Inventory()
+                    {
+                        InventoryID = reader.GetInt32(0),
+                        Qty = reader.GetInt32(1),
+                        StoreID = reader.GetInt32(2),
+                        ProductID = reader.GetInt32(3),
+                    });
+                }
+                
+            }
+
+            return _listOfInventory;
+        }
+
+
         public List<StoreFront> GetAllStoreFront()
         {
             List<StoreFront> listOfStoreFront = new List<StoreFront>();
@@ -360,6 +393,7 @@ namespace DL
             string sqlQuerySubstractInvetory = @"update Inventory
                                                 set qty = qty - @qty
                                                 where storeId  = @storeId AND productId = @productId";
+
             using (SqlConnection con = new SqlConnection(_connectionStrings))
             {
                 con.Open();
@@ -421,6 +455,23 @@ namespace DL
 
             }
             return _newListProduct;
+        }
+
+        public void ReplenishInventory(int p_inventoryId, int p_qty)
+        {
+            string sqlQuery = @"update Inventory
+                                set qty = qty + @qty
+                                where inventoryId = @p_inventoryId ";
+
+            using (SqlConnection con = new SqlConnection(_connectionStrings))
+            {
+                con.Open();
+                SqlCommand command = new SqlCommand(sqlQuery, con);
+                command.Parameters.AddWithValue("@qty", p_qty);
+                command.Parameters.AddWithValue("p_inventoryId", p_inventoryId);
+
+                command.ExecuteNonQuery();
+            }
         }
 
     }

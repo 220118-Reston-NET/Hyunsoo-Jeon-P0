@@ -10,5 +10,8 @@ namespace BL
         List<Inventory> GetAllInventoryDetailInStoreByID(int p_storeId);
 
         List<Product> GetAllproductDetailByStoreID(int p_storeId);
+        void ReplenishInventory(int p_inventoryId, int p_qty);
+        public List<Inventory> GetAllInventoryByID(int p_inventoryId);
+
     }
 }

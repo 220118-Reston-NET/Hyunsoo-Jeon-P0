@@ -1,13 +1,16 @@
 namespace StoreUI
 {
-    public class AdminMenu : IMenu
+    public class AdminSearchMenu : IMenu
     {
         public void Display()
         {
             Console.WriteLine("Good Day! ");
             Console.WriteLine("What would you like to do?");
-            Console.WriteLine("[2] Searching menu");
-            Console.WriteLine("[1] Adding menu");
+            Console.WriteLine("[5] Search / view orders");
+            Console.WriteLine("[4] Search Store Inventory by store Id");
+            Console.WriteLine("[3] Search Store");
+            Console.WriteLine("[2] Search Product");
+            Console.WriteLine("[1] Search Customer");
             Console.WriteLine("[0] Go back");
         }
 
@@ -15,13 +18,20 @@ namespace StoreUI
         {
             string userInput = Console.ReadLine();
 
-            switch(userInput){
+            switch (userInput)
+            {
                 case "0":
                     return "Exit";
                 case "1":
-                    return "AdminAddMenu";
+                    return "SearchCustomer";
                 case "2":
-                    return "AdminSearchMenu";
+                    return "SearchProduct";
+                case "3":
+                    return "SearchStoreFront";
+                case "4":
+                    return "SearchInventoryStore";
+                case "5":
+                    return "SearchOrder";
                 default:
                     Console.WriteLine("Please input a vaild response");
                     Console.WriteLine("Please press Enter to continue");
