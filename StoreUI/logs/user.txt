@@ -303,3 +303,27 @@ Customer Name: Bruce Wayne
 2022-02-14 15:15:21.483 -08:00 [INF] Displaying Search Customer Menu to user
 2022-02-14 15:15:30.800 -08:00 [INF] Exiting application
 2022-02-14 15:16:36.139 -08:00 [INF] Exiting application
+2022-02-15 12:06:27.484 -08:00 [INF] User enter customer ID 
+0
+2022-02-15 12:06:40.128 -08:00 [INF] User enter the store id and procede to order details
+0
+2022-02-15 12:06:50.388 -08:00 [INF] User enter the product name and quantity and to cart 
+
+2022-02-15 12:07:10.593 -08:00 [INF] User process Order 
+System.Collections.Generic.List`1[Models.LineItems]
+2022-02-15 12:07:10.710 -08:00 [INF] Success order!
+2022-02-15 12:07:20.748 -08:00 [INF] User enter the store id and procede to order details
+1
+2022-02-15 12:07:40.922 -08:00 [INF] Displaying Search product Menu to user
+2022-02-15 12:07:44.552 -08:00 [INF] User enter the product name to search product detail
+Coolant
+2022-02-15 12:07:53.222 -08:00 [INF] Displaying Search Customer Menu to user
+2022-02-15 12:08:00.992 -08:00 [INF] User enter the customer name 
+Hyunsoo
+2022-02-15 12:08:14.012 -08:00 [INF] Displaying Search Customer Menu to user
+2022-02-15 12:08:16.382 -08:00 [INF] User enter the customer name 
+0
+2022-02-15 12:08:23.687 -08:00 [INF] Displaying Search Customer Menu to user
+2022-02-15 12:08:26.507 -08:00 [INF] User enter the customer id to search customer
+1
+2022-02-15 12:08:33.182 -08:00 [INF] Exiting application
