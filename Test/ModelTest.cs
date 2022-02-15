@@ -5,37 +5,6 @@ namespace Test
 {
     public class ProductModelTest
     {
-        // [Fact]
-        // public void QuantityShouldValidData()
-        // {
-        //     //arrange
-        //     Product qty = new Product();
-        //     int validQty = 40;
-
-        //     //act
-        //     qty.Quantity = validQty;
-
-        //     // assert
-        //     Assert.NotNull(qty.Quantity);
-        //     Assert.Equal(validQty, qty.Quantity);
-
-        // }
-
-        // [Theory]
-        // [InlineData(-9)]
-        // [InlineData(-100)]
-        // [InlineData(-500)]
-        // public void QuantityShouldFailSetInvalidData(int p_invalidQty)
-        // {
-        //     // arrange
-        //     Product qty = new Product();
-
-        //     // act & assert
-        //     Assert.Throws<System.Exception>(
-        //         () => qty.Quantity = p_invalidQty
-        //     );
-        // }
-
         [Fact]
         public void PriceShouldValidData()
         {

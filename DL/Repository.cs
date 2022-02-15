@@ -3,7 +3,7 @@ using Models;
 
 namespace DL
 {
-    public class Repository
+    public class Repository : IRepository
     {
         private string _filepath = "../DL/Database/";
         private string _jsonString;
@@ -112,6 +112,16 @@ namespace DL
         {
             throw new NotImplementedException();
 
+        }
+
+        public Inventory AddInventory(Inventory p_inventory)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Product> GetAllproductDetailByStoreID(int p_storeId)
+        {
+            throw new NotImplementedException();
         }
     }
 }
