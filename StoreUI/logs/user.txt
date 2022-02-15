@@ -282,3 +282,24 @@ Inventory ID : 1
 2022-02-14 13:08:41.096 -08:00 [INF] Exiting application
 2022-02-14 13:15:50.781 -08:00 [INF] Exiting application
 2022-02-14 13:16:35.601 -08:00 [INF] Exiting application
+2022-02-14 13:39:01.658 -08:00 [INF] Exiting application
+2022-02-14 13:54:08.447 -08:00 [INF] Displaying Adding customer Menu to user
+2022-02-14 13:54:18.090 -08:00 [INF] Displaying Adding customer Menu to user
+2022-02-14 13:54:19.409 -08:00 [INF] Exiting application
+2022-02-14 14:03:18.342 -08:00 [INF] Exiting application
+2022-02-14 15:13:04.491 -08:00 [INF] Exiting application
+2022-02-14 15:13:17.827 -08:00 [INF] Displaying Adding customer Menu to user
+2022-02-14 15:13:27.934 -08:00 [INF] Displaying Adding customer Menu to user
+2022-02-14 15:13:37.594 -08:00 [INF] Displaying Adding customer Menu to user
+2022-02-14 15:14:51.829 -08:00 [INF] Displaying Adding customer Menu to user
+2022-02-14 15:15:01.924 -08:00 [INF] Displaying Adding customer Menu to user
+2022-02-14 15:15:03.919 -08:00 [INF] Adding Customer 
+Customer ID: 0 
+Customer Name: Bruce Wayne
+ Customer Address: 1111 Main St, Gotham, GT, 10100
+ Customer Email: batman@email.com
+ Customer Contact number: 888-888-8888
+2022-02-14 15:15:04.486 -08:00 [WRN] Failed to add Customer due to reaching total capacity (5)
+2022-02-14 15:15:21.483 -08:00 [INF] Displaying Search Customer Menu to user
+2022-02-14 15:15:30.800 -08:00 [INF] Exiting application
+2022-02-14 15:16:36.139 -08:00 [INF] Exiting application

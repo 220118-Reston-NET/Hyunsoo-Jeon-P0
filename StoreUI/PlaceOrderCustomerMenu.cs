@@ -34,6 +34,8 @@ namespace StoreUI
                 case "0":
                     return "CustomerMenu";
                 case "1":
+                    Log.Information("User enter customer ID \n" + _customerID);
+
                     Console.WriteLine("Enter customer ID");
                     _customerID = Convert.ToInt32(Console.ReadLine());
             

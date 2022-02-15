@@ -7,6 +7,7 @@ namespace StoreUI
     {
         private IOrderBL _orderBL;
         private List<Order> _listOfOrder;
+        public static int _orderID;
         public ViewOrderHistoryMenu(IOrderBL p_orderBL)
         {
             _orderBL = p_orderBL;

@@ -29,9 +29,10 @@ namespace StoreUI
                 case "1":
 
                     Console.WriteLine("Please enter a product name");
-                    string storetName = Console.ReadLine();
+                    string storeName = Console.ReadLine();
+                    Log.Information("User enter the store name to search store detail\n" + storeName);
 
-                    List<StoreFront> listOfStoreFront = _storeFrontBL.SearchStoreFront(storetName);
+                    List<StoreFront> listOfStoreFront = _storeFrontBL.SearchStoreFront(storeName);
                     foreach(var item in listOfStoreFront)
                     {
                         Console.WriteLine("********************");

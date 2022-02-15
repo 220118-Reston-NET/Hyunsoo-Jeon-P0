@@ -27,12 +27,10 @@ namespace StoreUI
                 case "0":
                     return "MainMenu";
                 case "1":
-
-                    // Console.WriteLine("Please enter a Order ID");
-
                     try
                     {
-                        //int orderID = Convert.ToInt32(Console.ReadLine());
+                        Log.Information("User view orders\n");
+
                         List<Order> listOfOrder = _orderBL.GetAllOrder();
                         foreach(var item in listOfOrder)
                         {
@@ -50,8 +48,7 @@ namespace StoreUI
                         Console.WriteLine("Please press Enter to continue");
                         Console.ReadLine();
                         return "SearchOrder";
-                    }
-                    return "SearchOrder";
+                    } 
                 default:
                     Console.WriteLine("Please input a valid response");
                     Console.WriteLine("Please press Enter to continue");

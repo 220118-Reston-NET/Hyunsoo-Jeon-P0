@@ -56,6 +56,8 @@ namespace StoreUI
                 case "0":
                     return "MainMenu";
                 case "1":
+                    Log.Information("User enter the store id and procede to order details\n" + _storeID);
+
                     Console.WriteLine("Enter Store ID");
                     _storeID = Convert.ToInt32(Console.ReadLine());
       

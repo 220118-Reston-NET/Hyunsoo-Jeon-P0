@@ -33,6 +33,7 @@ namespace StoreUI
 
                     Console.WriteLine("Please enter a name");
                     string name = Console.ReadLine();
+                    Log.Information("User enter the customer name \n" + name);
 
                     List<Customer> listOfCustomer = _customerBL.SearchCustomerByName(name);
                     foreach(var item in listOfCustomer)
@@ -50,6 +51,8 @@ namespace StoreUI
                     try
                     {
                         int customerID = Convert.ToInt32(Console.ReadLine());
+                        Log.Information("User enter the customer id to search customer\n" + customerID);
+
                         List<Customer> listOfCustomer2 = _customerBL.GetCustomerByCustomerID(customerID);
                         foreach(var item in listOfCustomer2)
                         {

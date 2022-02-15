@@ -30,6 +30,7 @@ namespace StoreUI
 
                     Console.WriteLine("Please enter a product name");
                     string productName = Console.ReadLine();
+                    Log.Information("User enter the product name to search product detail\n" + productName);
 
                     List<Product> listOfProduct = _productBL.SearchProduct(productName);
                     foreach(var item in listOfProduct)

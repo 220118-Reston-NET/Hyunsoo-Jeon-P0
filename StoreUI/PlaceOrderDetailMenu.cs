@@ -60,6 +60,8 @@ namespace StoreUI
                 case "0":
                     return "PlaceOrderCustomer";
                 case "1":
+                    Log.Information("User enter the product name and quantity and to cart \n");
+
                     Console.WriteLine("Enter the product name");
                     string inputName =Console.ReadLine();
 
@@ -98,6 +100,8 @@ namespace StoreUI
                     });
                     return "PlaceOrderDetail";
                 case "2":
+                    Log.Information("User process Order \n" + _cart);
+
                     if(_cart.Count()== 0)
                     {
                         Console.WriteLine("Your cart is empty! go Shopping!");
@@ -113,6 +117,8 @@ namespace StoreUI
 
                     _orderBL.PlaceOrder(PlaceOrderStoreMenu._storeID, PlaceOrderCustomerMenu._customerID, _totalPrice, _cart);
                     Console.WriteLine("Your Order is Success!");
+                    Log.Information("Success order!");
+
                     Console.WriteLine("Please press Enter to continue");
                     Console.ReadLine();
                     return "ViewOrderHistory";

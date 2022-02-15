@@ -380,7 +380,6 @@ namespace DL
             return _listOfOrder;
         }
 
-
         public void PlaceOrder(int p_storeId, int p_customerID, int p_totalPrice, List<LineItems> p_lineItem)
         {
             string sqlQueryOrder = @"insert into Orders
@@ -473,6 +472,8 @@ namespace DL
                 command.ExecuteNonQuery();
             }
         }
+
+
 
     }
 }

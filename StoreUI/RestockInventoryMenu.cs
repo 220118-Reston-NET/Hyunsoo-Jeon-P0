@@ -39,6 +39,8 @@ namespace StoreUI
                 case "0":
                     return "AdminAddMenu";
                 case "1":
+                    Log.Information("User enter the inventory ID to precess restock \n" + _inventoryId);
+
                     Console.WriteLine("Enter Inventory ID");
                     _inventoryId= Convert.ToInt32(Console.ReadLine());
 

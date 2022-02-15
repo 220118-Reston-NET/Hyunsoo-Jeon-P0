@@ -48,6 +48,7 @@ namespace StoreUI
                     {
                         Console.WriteLine("Please enter a store ID");
                         int storeId = Convert.ToInt32(Console.ReadLine());
+                        Log.Information("User enter the store id to check inventory \n" + storeId);
 
                         List<Inventory> listOfProduct = _inventoryBL.GetAllInventoryDetailInStoreByID(storeId);
                         foreach(var item in listOfProduct)

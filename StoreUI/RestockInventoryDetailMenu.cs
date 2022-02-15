@@ -39,11 +39,16 @@ namespace StoreUI
                 case "0":
                     return "AdminAddMenu";
                 case "1":
+
                     Console.WriteLine("Enter Quantity to restock");
 
                     int newQty = Convert.ToInt32(Console.ReadLine());
+                    Log.Information("User enter the quantity to restock \n" + newQty);
+
                     _inventoryBL.ReplenishInventory(RestockInventoryMenu._inventoryId, newQty);
                     Console.WriteLine("Your restock is Success!");
+                    Log.Information("Restock Success \n");
+
                     Console.WriteLine("Please press Enter to continue");
                     Console.ReadLine();
                     return "RestockInventoryDetail";
