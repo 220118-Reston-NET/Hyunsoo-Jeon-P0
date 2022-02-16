@@ -123,5 +123,11 @@ namespace DL
         {
             throw new NotImplementedException();
         }
+
+        public List<Order> GetAllOrdersByStoreID(int p_storeId)
+        {
+            throw new NotImplementedException();
+
+        }
     }
 }

@@ -347,3 +347,65 @@ Customer Name: Hanson Jeon
 0
 2022-02-15 19:56:56.723 -08:00 [INF] User enter customer ID 
 0
+2022-02-15 19:58:40.389 -08:00 [INF] Displaying Search product Menu to user
+2022-02-15 19:58:46.296 -08:00 [INF] User enter the product name to search product detail
+Coolant
+2022-02-15 19:58:59.721 -08:00 [INF] Exiting application
+2022-02-15 19:59:48.383 -08:00 [INF] Displaying Search product Menu to user
+2022-02-15 19:59:56.481 -08:00 [INF] User enter the product name to search product detail
+Handle Cover
+2022-02-15 20:00:05.886 -08:00 [INF] Exiting application
+2022-02-15 20:00:18.128 -08:00 [INF] Displaying Search Customer Menu to user
+2022-02-15 20:00:22.820 -08:00 [INF] User enter the customer name 
+Hanson
+2022-02-15 20:00:45.515 -08:00 [INF] Exiting application
+2022-02-15 20:00:52.673 -08:00 [INF] Displaying Search Customer Menu to user
+2022-02-15 20:00:56.585 -08:00 [INF] User enter the customer id to search customer
+6
+2022-02-15 20:01:14.795 -08:00 [INF] Displaying Search invetory store Menu to user
+2022-02-15 20:01:33.185 -08:00 [INF] User enter the store id to check inventory 
+1
+2022-02-15 20:02:04.804 -08:00 [INF] Exiting application
+2022-02-15 20:02:15.922 -08:00 [INF] Displaying Search Order Menu to user
+2022-02-15 20:02:16.970 -08:00 [INF] User view orders
+
+2022-02-15 20:02:25.235 -08:00 [INF] Exiting application
+2022-02-15 20:15:17.626 -08:00 [INF] Displaying Search Order Menu to user
+2022-02-15 20:15:19.814 -08:00 [INF] User view orders
+
+2022-02-15 20:15:24.344 -08:00 [INF] Exiting application
+2022-02-15 20:15:47.115 -08:00 [INF] Displaying Search Order Menu to user
+2022-02-15 20:15:50.234 -08:00 [INF] User view orders
+
+2022-02-15 20:42:27.346 -08:00 [INF] Exiting application
+2022-02-15 20:42:36.784 -08:00 [INF] Displaying Search Order Menu to user
+2022-02-15 20:42:39.242 -08:00 [INF] User enter Store ID 
+0
+2022-02-15 20:42:47.461 -08:00 [INF] Displaying Search Order Menu to user
+2022-02-15 20:42:49.771 -08:00 [INF] User enter Store ID 
+2
+2022-02-15 20:43:21.136 -08:00 [INF] Displaying Search Order Menu to user
+2022-02-15 20:43:22.351 -08:00 [INF] Exiting application
+2022-02-15 20:43:29.688 -08:00 [INF] Displaying Search Order Menu to user
+2022-02-15 20:43:31.981 -08:00 [INF] User enter Store ID 
+0
+2022-02-15 20:43:40.546 -08:00 [INF] Displaying Search Order Menu to user
+2022-02-15 20:43:41.897 -08:00 [INF] Exiting application
+2022-02-15 20:43:52.773 -08:00 [INF] Displaying Search Order Menu to user
+2022-02-15 20:43:55.276 -08:00 [INF] User view orders
+
+2022-02-15 20:44:04.771 -08:00 [INF] Exiting application
+2022-02-15 20:45:14.582 -08:00 [INF] User enter customer ID 
+0
+2022-02-15 20:45:35.190 -08:00 [INF] Displaying Search invetory store Menu to user
+2022-02-15 20:45:41.580 -08:00 [INF] User enter the store id to check inventory 
+3
+2022-02-15 20:46:26.761 -08:00 [INF] User enter the inventory ID to precess restock 
+0
+2022-02-15 20:46:37.965 -08:00 [INF] User enter the inventory ID to precess restock 
+3
+2022-02-15 20:46:43.815 -08:00 [INF] User enter the quantity to restock 
+2
+2022-02-15 20:46:43.882 -08:00 [INF] Restock Success 
+
+2022-02-15 20:46:48.090 -08:00 [INF] Exiting application

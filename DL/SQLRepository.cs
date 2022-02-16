@@ -260,6 +260,7 @@ namespace DL
             return listOfStoreFront;
         }
 
+
         public List<Customer> GetCustomerByCustomerID(int p_customerID)
         {
             List<Customer> listOfCustomer = new List<Customer>();
@@ -379,6 +380,37 @@ namespace DL
             }
             return _listOfOrder;
         }
+
+
+        public List<Order> GetAllOrdersByStoreID(int p_storeId)
+        {
+            List<Order> _listOfOrderByStore = new List<Order>();
+            string sqlQuery = @"select * from Orders o
+                                where o.storeId = @storeId
+                                order by orderId desc";
+            
+            using (SqlConnection con = new SqlConnection(_connectionStrings))
+            {
+                con.Open();
+
+                SqlCommand command = new SqlCommand(sqlQuery, con);
+                command.Parameters.AddWithValue("@storeId", p_storeId);
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                while(reader.Read())
+                {
+                    _listOfOrderByStore.Add(new Order(){
+                        OrderID = reader.GetInt32(0),
+                        TotalPrice = reader.GetInt32(1),
+                        StoreID = reader.GetInt32(2),
+                        CustomerID = reader.GetInt32(3)
+                    });
+                }
+            }
+            return _listOfOrderByStore;
+        }
+
 
         public void PlaceOrder(int p_storeId, int p_customerID, int p_totalPrice, List<LineItems> p_lineItem)
         {

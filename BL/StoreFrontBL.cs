@@ -37,5 +37,6 @@ namespace BL
 
             return listOfStoreFront.Where(store => store.StoreName.Contains(p_storeFrontName)).ToList();
         }
+
     }
 }

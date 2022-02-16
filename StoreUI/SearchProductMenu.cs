@@ -41,7 +41,7 @@ namespace StoreUI
                     Console.WriteLine("Please press Enter to continue");
                     Console.ReadLine();
 
-                    return "MainMenu";
+                    return "CustomerMenu";
                 default:
                     Console.WriteLine("Please input a valid response");
                     Console.WriteLine("Please press Enter to continue");

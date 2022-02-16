@@ -27,5 +27,9 @@ namespace BL
             return _repo.GetAllOrdersByID(p_customerID);
         }
 
+        public List<Order> GetAllOrdersByStoreID(int p_storeId)
+        {
+            return _repo.GetAllOrdersByStoreID(p_storeId);
+        }
     }
 }

@@ -24,6 +24,9 @@ while(repeat){
     string ans = menu.UserChoice();
 
     switch(ans){
+        case "ViewOrderHistoryByStore":
+            menu = new ViewOrderHistoryByStoreMenu(new OrderBL(new SQLRepository(_connectionString)));
+            break;
         case "RestockInventory":
             menu = new RestockInventoryMenu(new InventoryBL(new SQLRepository(_connectionString)));
             break;
@@ -46,7 +49,8 @@ while(repeat){
             break;
         case "SearchOrder":
             Log.Information("Displaying Search Order Menu to user");
-            menu = new SearchOrderMenu(new OrderBL(new SQLRepository(_connectionString)));
+            menu = new SearchOrderMenu(new OrderBL(new SQLRepository(_connectionString)), 
+                new StoreFrontBL(new SQLRepository(_connectionString)));
             break;
         case "SearchInventoryStore":
             Log.Information("Displaying Search invetory store Menu to user");
