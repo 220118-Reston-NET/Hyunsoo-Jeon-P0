@@ -15,7 +15,7 @@ namespace StoreUI
         
         public void Display()
         {
-            Console.WriteLine("Enter the employee information");
+            Console.WriteLine("Enter the customer information");
             Console.WriteLine("[5] Name -" + _newCustomer.Name);
             Console.WriteLine("[4] Contact No -" + _newCustomer.ContactNo);
             Console.WriteLine("[3] Address -" + _newCustomer.Address);
@@ -41,7 +41,7 @@ namespace StoreUI
                     }
                     catch (System.Exception exc)
                     {
-                        Log.Warning("Failed to add Customer due to reaching total capacity (5)");
+                        Log.Warning("Failed to add Customer due to reaching total capacity (10)");
                         Console.WriteLine(exc.Message);
                         Console.WriteLine("Press Enter to continue");
                         Console.ReadLine();
