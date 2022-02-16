@@ -19,7 +19,7 @@ namespace StoreUI
 
         public void Display()
         {
-
+            Console.Clear();
             Console.WriteLine("********************");
             Console.WriteLine("[1] Press Customer ID");
             Console.WriteLine("[0] Go back");

@@ -26,7 +26,7 @@ namespace StoreUI
         {
             foreach (var item in _listOfCustomer)
             {
-                Console.WriteLine("Welcom " + item.Name);
+                Console.WriteLine("Welcome " + item.Name);
             }
         }
         public void StoreFront_ProductDisplay(){
@@ -38,6 +38,7 @@ namespace StoreUI
         }
         public void Display()
         {
+            Console.Clear();
             CustomerWelcome_Display();
             StoreFront_ProductDisplay();
 
